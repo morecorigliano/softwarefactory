@@ -1,5 +1,5 @@
-$dark: #222222;
-$light: #4E4E4E;
+$dark: #121212;
+$light: #36394A;
 $white: #eee;
 
 @mixin font-values($size, $weight, $line){
@@ -29,7 +29,7 @@ html{
 body{
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-    background-color: #DADADA;
+    background-color: $white;
     a{
        text-decoration: none;
     }
@@ -43,10 +43,7 @@ header{
     background-color: transparent;
     position: absolute;
     width: 100%;
-    height: 4vw;
-    padding: 2vw;
-    top: 0;
-    left: 0;
+    padding: 0.2rem 0.8rem;
     z-index: 1500000;
 }
 
@@ -58,14 +55,29 @@ header{
     }
     h2{
         color: $light;
-        font-weight: 700;
         @include font-values(0.4rem, 700, 1.2);
         display: inline-block;
-        margin-left: 1vw;
+        margin-left: 0.5rem;
     }
     svg{
-        width: 5vw;
-        display: inline-block;
+        width: 2rem;
+    }
+}
+
+.nav-toggle{
+    display: none;
+    span{
+        display: block;
+        height: 0.8vw;
+        width: 4vw;
+        background-color: $white;
+        margin-bottom: 1.2vw;
+        &:nth-of-type(2){
+            width: 6vw;
+        }
+        &:last-of-type{
+            width: 8vw;
+        }
     }
 }
 
@@ -74,38 +86,51 @@ nav{
         display: inline-block;
         @include font-values(0.4rem, 300, 1.2);
         color: $white;
-        margin-right: 1vw;
+        margin-right: 0.5rem;
     }
+}
+
+//////////// inicio ////////////
+
+#body-home{
+    background-color: $dark;
 }
 
 #banner{
     position: relative;
     width: 100%;
-    height: 100vh;
-    padding: 3vw;
+    height: 105vh;
     background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.404) 50%, rgba(255, 255, 255, 0) 100%), url("../img/banner.jpg");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    @include flex-row-setting(center, space-between);
+    @include flex-row-setting(center, flex-start);
     h3{
-        @include font-values(1.3rem, 700, 1.2);
+        @include font-values(1.2rem, 700, 1.2);
         color: $white;
-        margin-left: 6vw;
-        margin-bottom: 2vw;
+        margin-left: 8vw;
+        margin-bottom: 1rem;
         span{
             font-weight: 300;
         }
     }
-    a{
+    #btn{
         border: 0.1vw solid $white;
-        margin-left: 6vw;
+        margin-left: 8vw;
         color: $white;
-        padding: 1vw 2vw;
+        padding: 0.5rem 1rem;
         @include font-values(0.5rem, 400, 1.2);
         text-transform: uppercase;
     }
-    svg{
-        height: 3vw;
+    #arrow{
+        position: absolute;
+        bottom: 10vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        svg{
+            height: 1.4rem;
+            transform: rotate(90deg);
+        }
     }
 }
 
@@ -114,7 +139,7 @@ nav{
     margin: 0 7.5vw;
     background-color: $light;
     position: relative;
-    top: -6vh;
+    top: -10vh;
     padding: 10vw 6vw;
     @include flex-row-setting(center, space-between);
     #nosotros-text{
@@ -122,19 +147,19 @@ nav{
         h4{
             @include font-values(1rem, 700, 1.2); 
             color: $white;
-            margin-bottom: 0.8vw;
+            margin-bottom: 0.4rem;
         }
         p{
-            @include font-values(0.5rem, 300, 1.2); 
+            @include font-values(0.6rem, 300, 1.2); 
             color: $white;
-            margin-bottom: 2vw;
+            margin-bottom: 1rem;
         }
         span{
-            width: 4vw;
-            height: 0.3vw;
+            width: 1.2rem;
+            height: 0.1rem;
             background-color: $white;
             display: block;
-            margin-bottom: 3vw;
+            margin-bottom: 1rem;
         }
     }
     img{
@@ -158,19 +183,19 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5vw;
-    padding-top: 12vw;
-    clip-path: polygon(0 31%, 100% 0, 100% 100%, 0 100%);
+    padding-bottom: 2rem;
+    padding-top: 5rem;
+    -webkit-clip-path: polygon(0 31%, 100% 0, 100% 100%, 0 100%);
     p{
-        @include font-values(0.8rem, 700, 1.2); 
+        @include font-values(0.6rem, 700, 1.2); 
         color: $white;
-        margin-bottom: 3vw;
+        margin-bottom: 1rem;
     }
     a{
         border: 0.1vw solid $white;
         color: $white;
-        padding: 1vw 2vw;
-        @include font-values(0.5rem, 400, 1.2);
+        padding: 0.5rem 1rem;
+        @include font-values(0.4rem, 400, 1.2);
         text-transform: uppercase;
     }
 }
@@ -178,36 +203,305 @@ nav{
 footer{
     @include flex-row-setting(center, space-between);
     width: 100%;
-    padding: 2vw;
+    padding: 0.5rem 1rem;
     background-color: $dark;
     p{
         display: inline-block;
         @include font-values(0.4rem, 300, 1.2);
         color: $white;
     }
-    .footer-logo{
+    .footer-info{
         @include flex-row-setting(center, center);
-        svg{
-            width: 4vw;
+        p{
             display: inline-block;
-            margin-right: 1vw;
         }
-    }
-    .footer-mail{
-        @include flex-row-setting(center, center);
         svg{
-            width: 1vw;
+            width: 1.5rem;
             display: inline-block;
-            margin-right: 1vw;
+            margin-right: 0.5rem;
+            &:last-of-type{
+                width: 0.5rem;
+                margin-left: 0.5rem;
+                margin-right: 0.2rem;
+            }
         }
     }
     .footer-socialmedia{
         @include flex-row-setting(center, center);
         text-transform: uppercase;
         svg{
-            width: 2vw;
+            width: 1rem;
             display: inline-block;
-            margin-left: 1vw;
+            margin-left: 0.5rem;
         }
+    }
+}
+
+//////////// contacto ////////////
+
+#banner-contacto{
+    width: 100%;
+    background-color: $dark;
+    background-size: cover;
+    background-position:right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: $white;
+    padding: 4rem 8vw;
+    h3{
+        margin-bottom: 0.5rem;
+        @include font-values(1.2rem, 700, 1.2);
+    }   
+    p{
+        @include font-values(0.8rem, 300, 1.2);
+        width: 35%;
+    }
+}
+
+#contacto-formularios{
+    display: -webkit-flex;
+    padding: 1.5rem 5rem;
+    #carga-cv{
+        background-color: $light;
+        width: 45%;
+        height: inherit;
+        margin-right: 2rem;
+        padding: 0.5rem;
+        color: $white;
+        position: relative;
+        p{
+            @include font-values(0.8rem, 300, 1.2);
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: calc(100% - 2rem);
+        }
+        #cargar{
+            width: calc(100% - 2rem);
+            @include font-values(0.6rem, 700, 1.5); 
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            input{
+                width: 100%;
+                -webkit-appearance: none;
+            }
+        }
+
+        #enviar-cv{
+            width: calc(100% - 2rem);
+            border: 0.1vw solid $white;
+            color: $white;
+            background-color: transparent;
+            padding: 0.4rem;
+            @include font-values(0.4rem, 300, 1.2);
+            text-transform: uppercase;
+            cursor: pointer;
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: none;
+            
+        }
+    }
+    #formulario{
+        width: 100%;
+        .form{
+            position: relative;
+            margin-bottom: 1rem;
+            input, textarea{
+            border: 0.05vw solid black;
+            @include font-values(0.5rem, 400, 1.4);
+            outline: none;
+            border-radius: 0; 
+            padding: 0.2rem 0.3rem;
+            width: 100%;
+            background-color: $white;
+            -webkit-appearance: none;
+            }
+            textarea{
+                height: 5.5rem;
+                resize: none;
+                margin-top: 0.4rem;
+            }
+            #label-text{
+                @include font-values(0.5rem, 400, 1);
+                color: rgba(0, 0, 0, 0.5);
+            }
+            .moving-label{
+                @include font-values(0.5rem, 400, 1.4);
+                position: absolute;
+                bottom: 0.2rem;
+                left: 0.3rem;
+                opacity: 0.7;
+                display: block;
+                transition: transform 0.3s cubic-bezier(.18,.57,.5,1.03);
+                color: rgba(0, 0, 0, 0.5);
+                pointer-events: none;
+            }
+            input:focus ~ label{
+                transform: translate(-0.3rem, 1rem);
+                font-size: 0.4rem;
+            }
+         
+            input:not(:focus):valid ~ label{
+                transform: translate(-0.3rem, 1rem);
+                font-size: 0.4rem;
+            }
+        }
+        #btn-enviar{
+            width: 100%;
+            background-color: $light;
+            color: $white;
+            @include font-values(0.5rem, 400, 1);
+            text-transform: capitalize;
+            border: none;
+            outline: none;
+            border-radius: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            -webkit-appearance: none;
+        } 
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1024px){
+    html{
+        font-size: 6vw;
+    }
+    header{
+        padding: 0.5rem 0.5rem;
+    }
+    .nav-toggle{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    nav{
+        position: absolute;
+        display: none;
+    }
+
+    #banner{
+        height: 90vh;
+        #arrow{
+            bottom: 2vh;
+        }
+    }
+    #nosotros{
+        width: 100%;
+        margin: 0;
+        top: 0;
+        padding: 15vw 12vw 0 12vw;
+        display: block;
+        #nosotros-text{
+            width: 100%;
+        }
+        img{
+            width: 75vw;
+            height: 50vw;
+            object-fit: cover;
+            left: 0;
+            margin-top: -8vw;
+            top: 15vw;
+        }
+    }
+    footer{
+        display: block;
+        .footer-socialmedia{
+            margin-top: 0.8rem;
+        }
+    }
+    #banner-contacto{
+        p{
+            width: 80%;
+        }
+    }
+    #contacto-formularios{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        #carga-cv{
+            padding: 10vw 6vw;
+            order: 2;
+            width: 100vw;
+            height: 100%;
+            background-color: $light;
+            margin: 0;
+            text-align: center;
+            p{
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                margin-bottom: 5vw;
+            }
+            #cargar{
+                width: 100%;
+                position: relative;
+                left: 0;
+                top: 0;
+                transform: none;
+                input{
+                    margin-top: 10vw;
+                }
+            }
+            #enviar-cv{
+                width: 100%;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                transform:none;
+                margin-top: 10vw;
+            }
+        }
+    #formulario{
+        order: 1;
+        width: 100vw;
+        padding: 10vw 6vw;
+    }
+    }
+} 
+
+
+
+
+
+
+
+@media screen and (orientation:landscape) and (max-width: 1024px){
+    html{
+        font-size: 5vw;
+    }
+    header{
+        padding: 0.2rem 0.5rem;
+    }
+    .nav-toggle{
+        transform: scale(0.6);
+    }
+    #banner{
+        height: 130vh;
+        h3{
+            font-size: 1rem;
+        }
+        #btn{
+            font-size: 0.4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px){
+    html{
+        font-size: 4vw;
     }
 }
