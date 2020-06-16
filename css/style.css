@@ -21,10 +21,30 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  padding: 0.2rem 0.8rem;
-  z-index: 1500000; }
+  padding: 0.6rem 0.8rem;
+  z-index: 1500000;
+  transition: background 0.3s ease-out; }
+
+#mobile-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 500vh;
+  width: 500vw;
+  background-color: #121212;
+  z-index: -15000;
+  transform-origin: top right;
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+  border-bottom-left-radius: 50%; }
+
+.scroll {
+  background-color: #121212;
+  transition: background 0.3s ease-out;
+  box-shadow: 0rem 0rem 1vh rgba(0, 0, 0, 0.2);
+  border-bottom: 0.5px solid rgba(117, 117, 117, 0.2); }
 
 .logo {
   display: flex;
@@ -43,29 +63,41 @@ header {
     display: inline-block;
     margin-left: 0.5rem; }
   .logo svg {
-    width: 2rem; }
+    height: 0.6rem; }
 
-.nav-toggle {
+#nav-toggle {
   display: none; }
-  .nav-toggle span {
+  #nav-toggle span {
     display: block;
     height: 0.8vw;
-    width: 4vw;
+    width: 8vw;
     background-color: #eee;
-    margin-bottom: 1.2vw; }
-    .nav-toggle span:nth-of-type(2) {
+    margin-bottom: 1.2vw;
+    transform-origin: top right;
+    transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+    #nav-toggle span:nth-of-type(2) {
       width: 6vw; }
-    .nav-toggle span:last-of-type {
-      width: 8vw; }
+    #nav-toggle span:last-of-type {
+      width: 4vw;
+      margin-bottom: 0;
+      transform-origin: bottom right; }
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
 
 nav ul li {
-  display: inline-block;
+  display: inline;
+  list-style: none;
   font-size: 0.4rem;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: 0.05rem;
-  color: #eee;
-  margin-right: 0.5rem; }
+  margin-left: 0.8rem; }
+  nav ul li a {
+    color: white; }
 
 #body-home {
   background-color: #121212; }
@@ -223,11 +255,11 @@ footer {
       display: inline-block;
       margin-left: 0.5rem; }
 
-#banner-contacto {
+#banner-section {
   width: 100%;
-  background-color: #121212;
+  background-image: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.404) 50%, rgba(255, 255, 255, 0) 100%), url("../img/servicios.jpg");
   background-size: cover;
-  background-position: right;
+  background-position: top right;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -235,13 +267,13 @@ footer {
   align-items: flex-start;
   color: #eee;
   padding: 4rem 8vw; }
-  #banner-contacto h3 {
+  #banner-section h3 {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem; }
-  #banner-contacto p {
+  #banner-section p {
     font-size: 0.8rem;
     font-weight: 300;
     line-height: 1.2;
@@ -256,33 +288,26 @@ footer {
     width: 45%;
     height: inherit;
     margin-right: 2rem;
-    padding: 0.5rem;
     color: #eee;
-    position: relative; }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; }
     #contacto-formularios #carga-cv p {
       font-size: 0.8rem;
       font-weight: 300;
       line-height: 1.2;
-      letter-spacing: 0.05rem;
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      width: calc(100% - 2rem); }
+      letter-spacing: 0.05rem; }
     #contacto-formularios #carga-cv #cargar {
-      width: calc(100% - 2rem);
       font-size: 0.6rem;
       font-weight: 700;
       line-height: 1.5;
-      letter-spacing: 0.05rem;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%); }
+      letter-spacing: 0.05rem; }
       #contacto-formularios #carga-cv #cargar input {
         width: 100%;
         -webkit-appearance: none; }
     #contacto-formularios #carga-cv #enviar-cv {
-      width: calc(100% - 2rem);
       border: 0.1vw solid #eee;
       color: #eee;
       background-color: transparent;
@@ -293,28 +318,26 @@ footer {
       letter-spacing: 0.05rem;
       text-transform: uppercase;
       cursor: pointer;
-      position: absolute;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: none; }
+      border-radius: none;
+      width: 100%; }
   #contacto-formularios #formulario {
     width: 100%; }
     #contacto-formularios #formulario .form {
       position: relative;
       margin-bottom: 1rem; }
       #contacto-formularios #formulario .form input, #contacto-formularios #formulario .form textarea {
-        border: 0.05vw solid black;
+        border: none;
         font-size: 0.5rem;
         font-weight: 400;
         line-height: 1.4;
         letter-spacing: 0.05rem;
         outline: none;
         border-radius: 0;
-        padding: 0.2rem 0.3rem;
+        padding: 0.3rem;
         width: 100%;
-        background-color: #eee;
-        -webkit-appearance: none; }
+        background-color: #E1E1E1;
+        -webkit-appearance: none;
+        border-radius: 0.15rem; }
       #contacto-formularios #formulario .form textarea {
         height: 5.5rem;
         resize: none;
@@ -324,19 +347,18 @@ footer {
         font-weight: 400;
         line-height: 1;
         letter-spacing: 0.05rem;
-        color: rgba(0, 0, 0, 0.5); }
+        color: rgba(0, 0, 0, 0.8); }
       #contacto-formularios #formulario .form .moving-label {
         font-size: 0.5rem;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 1.4;
         letter-spacing: 0.05rem;
         position: absolute;
-        bottom: 0.2rem;
+        bottom: 0.3rem;
         left: 0.3rem;
-        opacity: 0.7;
         display: block;
         transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
-        color: rgba(0, 0, 0, 0.5);
+        color: #121212;
         pointer-events: none; }
       #contacto-formularios #formulario .form input:focus ~ label {
         transform: translate(-0.3rem, 1rem);
@@ -348,30 +370,113 @@ footer {
       width: 100%;
       background-color: #36394A;
       color: #eee;
-      font-size: 0.5rem;
-      font-weight: 400;
+      font-size: 0.4rem;
+      font-weight: 300;
       line-height: 1;
       letter-spacing: 0.05rem;
       text-transform: capitalize;
       border: none;
       outline: none;
-      border-radius: none;
+      border-radius: 0.15rem;
       padding: 0.5rem;
       cursor: pointer;
       -webkit-appearance: none; }
+
+.article {
+  background-color: #36394A;
+  padding: 3rem;
+  color: #eee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; }
+  .article.right {
+    background-color: #121212;
+    text-align: right; }
+    .article.right .article-text {
+      order: 2; }
+    .article.right .lenguajes {
+      order: 1; }
+    .article.right span {
+      position: absolute;
+      right: 3rem; }
+  .article .article-text {
+    width: 35%; }
+    .article .article-text h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.05rem;
+      color: #eee;
+      margin-bottom: 0.4rem; }
+    .article .article-text span {
+      width: 1.2rem;
+      height: 0.1rem;
+      background-color: #eee;
+      display: block; }
+    .article .article-text p {
+      font-size: 0.5rem;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0.05rem;
+      margin-top: 1rem; }
+  .article .lenguajes {
+    width: 55%; }
+    .article .lenguajes .lng-row {
+      display: flex;
+      flex-direction: row;
+      align-items: space-between;
+      justify-content: space-between;
+      font-size: 0.4rem;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0.05rem; }
+      .article .lenguajes .lng-row:first-of-type {
+        margin-bottom: 2.5rem; }
+      .article .lenguajes .lng-row .lng {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        opacity: .5; }
+        .article .lenguajes .lng-row .lng svg {
+          height: 1.4rem;
+          margin-bottom: 0.5rem; }
+        .article .lenguajes .lng-row .lng .more {
+          margin-top: 0.4rem;
+          border-radius: 50%;
+          border: 1px solid #eee; }
+          .article .lenguajes .lng-row .lng .more svg {
+            height: 0.2rem;
+            margin: 0.1rem; }
 
 @media screen and (max-width: 1024px) {
   html {
     font-size: 6vw; }
   header {
-    padding: 0.5rem 0.5rem; }
-  .nav-toggle {
+    padding: 0.8rem; }
+    header .logo h2 {
+      font-size: 0.5rem; }
+  nav #nav-toggle {
     display: flex;
     flex-direction: column;
     align-items: flex-end; }
-  nav {
-    position: absolute;
-    display: none; }
+  nav ul {
+    position: fixed;
+    top: 50vh;
+    left: 0;
+    transform: translate(150%, -50%);
+    display: block;
+    transition: transform 0.5s ease-out; }
+    nav ul li {
+      display: list-item;
+      width: 100vw;
+      margin: 0;
+      text-align: center;
+      font-size: 1rem;
+      padding: 1rem 0; }
   #banner {
     height: 90vh; }
     #banner #arrow {
@@ -395,7 +500,7 @@ footer {
     display: block; }
     footer .footer-socialmedia {
       margin-top: 0.8rem; }
-  #banner-contacto p {
+  #banner-section p {
     width: 80%; }
   #contacto-formularios {
     display: flex;
@@ -406,43 +511,57 @@ footer {
       order: 2;
       width: 100vw;
       height: 100%;
-      background-color: #36394A;
-      margin: 0;
-      text-align: center; }
+      margin: 0; }
       #contacto-formularios #carga-cv p {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        transform: none;
         margin-bottom: 5vw; }
       #contacto-formularios #carga-cv #cargar {
-        width: 100%;
-        position: relative;
-        left: 0;
-        top: 0;
-        transform: none;
-        text-align: center; }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
         #contacto-formularios #carga-cv #cargar input {
-          margin-top: 10vw; }
+          margin-top: 10vw;
+          width: 50%; }
       #contacto-formularios #carga-cv #enviar-cv {
-        width: 100%;
-        position: relative;
-        bottom: 0;
-        left: 0;
-        transform: none;
         margin-top: 10vw; }
     #contacto-formularios #formulario {
       order: 1;
       width: 100vw;
-      padding: 10vw 6vw; } }
+      padding: 10vw 6vw; }
+  .article {
+    padding: 2rem 1.5rem;
+    display: block; }
+    .article.right {
+      text-align: left; }
+      .article.right span {
+        position: relative;
+        top: 0;
+        left: 0; }
+    .article .article-text {
+      width: 100%; }
+    .article .lenguajes {
+      width: 100%;
+      margin-top: 2rem; } }
 
 @media screen and (orientation: landscape) and (max-width: 1024px) {
   html {
     font-size: 5vw; }
   header {
-    padding: 0.2rem 0.5rem; }
-  .nav-toggle {
+    padding: 0.3em 0.5rem; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%; }
+    nav ul li {
+      display: inline;
+      width: auto;
+      margin-right: 1.2rem;
+      font-size: 0.7rem; }
+      nav ul li:last-of-type {
+        margin-right: 0; }
+  #nav-toggle {
     transform: scale(0.6); }
   #banner {
     height: 130vh; }

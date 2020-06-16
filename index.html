@@ -9,7 +9,8 @@
 </head>
 <body id="body-home">
 
-    <header>
+    <header id="header">
+    <div id="mobile-bg"></div>
     <a href="index.html" class="logo">
             <h1>Name</h1>        
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135.874 36.95">
@@ -25,17 +26,17 @@
               
             <h2>Software Factory</h2>              
     </a>
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
     <nav>
-        <ul>
-            <a href="#nosotros"><li>Nosotros</li></a>
-            <a href="servicios.html"><li>Servicios</li></a>
-            <a href="#semillero"><li>Semillero</li></a>
-            <a href="contacto.html"><li>Contacto</li></a>
+      <div id="nav-toggle">
+        <span id="line-one"></span>
+        <span id="line-two"></span>
+        <span id="line-three"></span>
+      </div>
+        <ul id="nav-list">
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="index.html#semillero">Semillero</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
     </header>
@@ -45,7 +46,7 @@
     <div id="banner">
         <div id="home-title">
         <h3>Lorem Ipsum,<br><span>dolor sit amet.</span></h3>
-        <a href="#" id="btn">Lorem Ipsum</a>
+        <a href="servicios.html" id="btn">CONOCE MAS</a>
         </div>
         <a href="#nosotros" id="arrow">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.569 67.984">
@@ -135,4 +136,5 @@
     </footer>
 
 </body>
+<script src="js/script.js"></script>
 </html>
