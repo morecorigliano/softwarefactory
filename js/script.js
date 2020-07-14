@@ -99,3 +99,15 @@ for (var i = 0; i < lng.length; i++) {
     this.children[1].style.fontWeight = "300";
   });
 }
+
+var formInputs = document.getElementsByClassName("form");
+
+for (var i = 0; i < formInputs.length; i++) {
+    formInputs[i].children[0].addEventListener("input", function(){
+        if(this.value.length == 0){
+            this.parentElement.children[1].classList.remove("filled"); 
+        }else{
+        this.parentElement.children[1].classList.add("filled");
+        }
+    });
+}
