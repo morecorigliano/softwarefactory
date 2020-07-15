@@ -82,7 +82,7 @@ header{
         margin-left: 0.5rem;
     }
     svg{
-        height: 0.9rem;
+        height: 1rem;
     }
 }
 
@@ -220,7 +220,7 @@ nav ul li{
     animation-name: moveUp;
     animation-duration: .5s;
     animation-timing-function: ease-in-out;
-    clip-path: polygon(0 90%, 0 0, 150% 0, 150% 90%, 58% 90%, 50% 100%, 42% 90%);
+    -webkit-clip-path: polygon(0 90%, 0 0, 150% 0, 150% 90%, 58% 90%, 50% 100%, 42% 90%);
     overflow: visible;
     @include flex-row-setting(center, space-between);
     #nosotros-text{
@@ -296,7 +296,7 @@ nav ul li{
                 transition: transform 0.2s cubic-bezier(.18,.57,.5,1.03);
             }
             p{
-                width: 50%;
+                width: 55%;
                 color: white;
                 @include font-values(0.6rem, 300, 1.2);
             }
@@ -308,6 +308,9 @@ nav ul li{
             transform: translateY(1rem);
         }
         .icon:hover svg path{
+            fill: #D4D4D4;
+        }
+        .icon:hover svg circle{
             fill: #D4D4D4;
         }
     }
@@ -386,26 +389,21 @@ nav ul li{
     }
 }
 
-#semillero{
-    display: block;
-    height: 50vh;
-}
-
 ////// contacto /////////
 
 #contacto{
-    background-color: $light;
-    padding-top: 4rem;
-    -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+    background-color: #262626;
 }
 
 #call-contacto{
+    padding: 3rem 0 2.5rem 0;
+    -webkit-clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+    background-color: $dark;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 0.5rem;
     p{
         @include font-values(0.6rem, 300, 1.2); 
         color: $white;
@@ -427,10 +425,10 @@ nav ul li{
 
 #contacto-formularios{
     display: -webkit-flex;
-    padding: 1.5rem 5rem 4rem 5rem;
-    background-color: $light;
+    padding: 3rem 5rem 3rem 5rem;
+    background-color: #262626;
     #carga-cv{
-        background-color: $dark;
+        background-color: $light;
         width: 45%;
         height: inherit;
         margin-right: 2rem;
@@ -455,9 +453,9 @@ nav ul li{
             }
         }
         #enviar-cv{
-            border: 0.1vw solid $white;
+            border: none;
             color: $white;
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.3);
             padding: 0.4rem;
             @include font-values(0.4rem, 300, 1.2);
             text-transform: uppercase;
@@ -515,11 +513,11 @@ nav ul li{
         }
         #btn-enviar{
             width: 100%;
-            background-color: #262626;
+            background-color: transparent;
+            border: 0.05vw solid $white;
             color: $white;
             @include font-values(0.4rem, 300, 1);
             text-transform: capitalize;
-            border: none;
             outline: none;
             border-radius: 0.15rem;
             padding: 0.5rem;
@@ -698,7 +696,6 @@ footer{
             width: 100vw;
             height: 100%;
             margin: 0;
-            background-color: #262626;
             p{
                 margin-bottom: 5vw;
             }
