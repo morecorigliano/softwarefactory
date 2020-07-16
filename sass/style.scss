@@ -43,7 +43,7 @@ header{
     background-color: transparent;
     position: fixed;
     width: 100%;
-    padding: 0.5rem 0.8rem;
+    padding: 0.4rem 0;
     z-index: 1500000;
     transition: background 0.3s ease-out;
 }
@@ -69,20 +69,30 @@ header{
     border-bottom: 0.5px solid rgba(117, 117, 117, 0.2);
 }
 
+nav h1{
+    position: absolute;
+    opacity: 0;
+}
+
 #logo{
-    @include flex-row-setting(center, center);
-    h1{
-        position: absolute;
-        opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    svg{
+        height: 1.1rem;
     }
+}
+
+#logo-mobile{
+    display: none;
     h2{
-        color: $light;
         @include font-values(0.4rem, 700, 1.2);
-        display: inline-block;
-        margin-left: 0.5rem;
+        color: #666A84;  
     }
     svg{
-        height: 1rem;
+        height: 1.3rem;
+        margin-right: .5rem;
     }
 }
 
@@ -107,49 +117,137 @@ header{
     }
 }
 
-nav ul{
+nav{
+    width: 100vw;
     @include flex-row-setting(center, center);
 }
 
-nav ul li{
+nav #nav-list{
+    @include flex-row-setting(center, center);
+}
+
+nav #nav-list .nav-li{
     display: inline;
     list-style: none;
     position: relative;
-    @include font-values(0.4rem, 300, 1.2);
-    margin-left: 0.8rem;
+    @include font-values(0.3rem, 300, 1.2);
+    margin-left: 1.2rem;
+    &:first-of-type{
+        margin-left: none;
+    }
     a{
         color: white;
+        text-transform: uppercase;
+        &#forma-parte{
+            color: #666A84; 
+            font-weight: 700;  
+        }
     }
-    span{
+    .underline{
+        opacity: 0;
+        width: 100%;
         position: absolute;
-        width: 0;
-        height: 200%;
-        background-color: $light;
-        top: -50%;
-        right: -20%;
-        z-index: -444444;
-        transform-origin: right center;
-        transition: all .3s cubic-bezier(.18,.57,.5,1.03);
+        left: 0;
+        bottom: -0.4rem;
+        @include flex-row-setting(center, flex-start)
+        .circle{
+            width: 0.2rem;
+            height: 0.2rem;
+            display: block;
+            border: 0.04rem solid #666A84;
+            border-radius: 50%;
+        }
+        .line{
+            width: 0;
+            height: 0.04rem;
+            display: block;
+            background-color: #666A84;
+        }
     }
-    &:hover span{
-        animation: moveFast .25s forwards;
-        animation-timing-function: ease-in;
+    &:hover .underline{
+        opacity: 1;
+    }
+    &:hover .underline .line{
+        animation: slideIn .2s ease-out forwards;
+    }
+    &:hover #under-servicios{
+        pointer-events: auto;
+        animation: showUnder .2s ease-out forwards;
+    }
+    &:hover #under-servicios li{
+        pointer-events: auto;
+        animation: slideRight .2s ease-out forwards;
     }
 }
 
-@keyframes moveFast{
-    20%{
-       width: 50%;
-    }
-    60%{
-      width: 100%; 
-     background-color: rgba(255, 255, 255, 0.6);
+@keyframes showUnder{
+    0%{
+        opacity: 0;
     }
     100%{
-        width: 140%;
-        background-color: $light;
+        opacity: 1;
     }
 }
+
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-.5rem);    
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn{
+    0%{
+        width: 10%;
+    }
+    50%{
+        background-color: white;
+    }
+    100%{
+        background-color: #666A84;
+        width: 80%;
+    }
+}
+
+nav #under-servicios{
+    opacity: 0;
+    transform-origin: top center;
+    pointer-events: none;
+    background-color: transparent;
+    position: absolute;
+    top: 100%;
+    left: -45%;
+    width: 190%;
+    padding: .5rem;
+    &.scroll-sv{
+        background-color: black;
+        transition-delay: 2s;
+        transition: background 1.2s ease-out;
+    }
+    li{
+        list-style: none;
+        transform: translateX(-.5rem);
+        opacity: 0;
+        margin-left: 0;
+        margin-bottom: .5rem;
+        &:first-of-type{
+            margin-top: .5rem;
+        }
+        &:last-of-type{
+            margin-bottom: .1rem;
+        }
+        &:hover a{
+            color: #666A84;
+            font-weight: 400;
+        }
+    }
+}
+
+
 
 //////////// inicio ////////////
 
@@ -165,23 +263,40 @@ nav ul li{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    #slider{
+        position: relative;
+    }
     h3{
-        @include font-values(1.2rem, 700, 1.2);
+        @include font-values(1.2rem, 300, 1.2);
         color: $white;
         margin-left: 8vw;
-        margin-bottom: 1rem;
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+        margin-bottom: 1rem;
+        position: relative;
+        top: 0;
+        left: 0;
         span{
-            font-weight: 300;
+            font-weight: 700;
         }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+          @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+          }
+          
     }
-    #btn{
+    .btn{
+        width: auto;
         display: block;
         border: 0.1vw solid $white;
         margin-left: 8vw;
@@ -354,39 +469,31 @@ nav ul li{
             margin-top: 1rem;
         }
     }
-    .lenguajes{
-        width: 55%;
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        row-gap: 6vw;
-            .lng{
-                @include font-values(0.4rem, 300, 1.5);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                &.white svg path{
-                    fill: rgba(255, 255, 255, 0.5);
-                }
-                p{
-                    transition: font 0.2s cubic-bezier(.18,.57,.5,1.03);
-                }
-                svg{
-                    height: 1.4rem;
-                    margin-bottom: 0.5rem;
-                    transition: transform 0.2s cubic-bezier(.18,.57,.5,1.03);
-                }
-                .more{
-                    margin-top: 0.4rem;
-                    border-radius: 50%;
-                    border: 1px solid $white;
-                    svg{
-                        height: 0.2rem;
-                        margin: 0.1rem;
-                    }
-                }
+}
+
+.lenguajes{
+    width: 55%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 6vw;
+        .lng{
+            @include font-values(0.4rem, 300, 1.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &.white svg path{
+                fill: rgba(255, 255, 255, 0.5);
             }
-    }
+            p{
+                transition: font 0.2s cubic-bezier(.18,.57,.5,1.03);
+            }
+            svg{
+                height: 1.4rem;
+                margin-bottom: 0.5rem;
+                transition: transform 0.2s cubic-bezier(.18,.57,.5,1.03);
+            }
+        }
 }
 
 ////// contacto /////////
@@ -424,106 +531,149 @@ nav ul li{
 }
 
 #contacto-formularios{
-    display: -webkit-flex;
-    padding: 3rem 5rem 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
     background-color: #262626;
-    #carga-cv{
-        background-color: $light;
-        width: 45%;
-        height: inherit;
-        margin-right: 2rem;
-        color: $white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        p{
-            @include font-values(0.8rem, 300, 1.2);
-        }
-        #cargar{
-            @include font-values(0.6rem, 700, 1.5); 
-            p{
-                font-size: 0.4rem;
-                margin-bottom: 0.5rem;
-            }
-            input{
-                width: 100%;
-                -webkit-appearance: none;
-            }
-        }
-        #enviar-cv{
-            border: none;
-            color: $white;
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 0.4rem;
-            @include font-values(0.4rem, 300, 1.2);
-            text-transform: uppercase;
-            cursor: pointer;
-            border-radius: none; 
-            width: 100%;
-        }
-    }
-    #formulario{
+}
+
+#formulario, #formulario-join{
+    width: 50%;
+    .form{
+        position: relative;
+        margin-bottom: 1rem;
+        input, textarea{
+        border: none;
+        @include font-values(0.5rem, 400, 1.4);
+        outline: none;
+        border-radius: 0; 
+        padding: 0.3rem;
         width: 100%;
-        .form{
-            position: relative;
-            margin-bottom: 1rem;
-            input, textarea{
-            border: none;
-            @include font-values(0.5rem, 400, 1.4);
-            outline: none;
-            border-radius: 0; 
-            padding: 0.3rem;
-            width: 100%;
-            background-color: #E1E1E1;
-            -webkit-appearance: none;
-            border-radius: 0.15rem;
-            }
-            textarea{
-                height: 5.5rem;
-                resize: none;
-                margin-top: 0.4rem;
-            }
-            #label-text{
-                @include font-values(0.5rem, 300, 1);
-                color: rgba(0, 0, 0, 0.8);
-                color: white;
-            }
-            .moving-label{
-                @include font-values(0.5rem, 300, 1.4);
-                position: absolute;
-                bottom: 0.3rem;
-                left: 0.3rem;
-                display: block;
-                transition: transform 0.3s cubic-bezier(.18,.57,.5,1.03);
-                color: $dark;
-                pointer-events: none;
-                &.filled{
-                    transform: translate(-0.3rem, 1rem);
-                    font-size: 0.4rem;
-                    color: white;
-                }
-            }
-            input:focus ~ label{
+        background-color: #E1E1E1;
+        -webkit-appearance: none;
+        border-radius: 0.15rem;
+        }
+        textarea{
+            height: 5.5rem;
+            resize: none;
+            margin-top: 0.4rem;
+        }
+        .label-text{
+            @include font-values(0.5rem, 300, 1);
+            color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .moving-label{
+            @include font-values(0.5rem, 300, 1.4);
+            position: absolute;
+            bottom: 0.3rem;
+            left: 0.3rem;
+            display: block;
+            transition: transform 0.3s cubic-bezier(.18,.57,.5,1.03);
+            color: $dark;
+            pointer-events: none;
+            &.filled{
                 transform: translate(-0.3rem, 1rem);
                 font-size: 0.4rem;
                 color: white;
             }
         }
-        #btn-enviar{
+        input:focus ~ label{
+            transform: translate(-0.3rem, 1rem);
+            font-size: 0.4rem;
+            color: white;
+        }
+    }
+    #btn-enviar, #send-cv{
+        width: 100%;
+        background-color: transparent;
+        border: 0.05vw solid $white;
+        color: $white;
+        @include font-values(0.4rem, 300, 1);
+        text-transform: capitalize;
+        outline: none;
+        border-radius: 0.15rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        -webkit-appearance: none;
+    } 
+}
+
+////// join //////
+
+#join{
+    background-color: $light;
+}
+
+#join-us{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    h3{
+        @include font-values(1rem, 700, 1.2);  
+        text-transform: uppercase;
+    }
+    span{
+        background-color: #666A84;
+        height: 2rem;
+        width: .05rem;
+        margin: 1rem 0;
+    }
+    h4{
+        @include font-values(.7rem, 300, 1.2);
+        margin-bottom: 3rem;
+    }
+    #postulate{
+        margin: 2rem 0 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3{
+            @include font-values(.7rem, 700, 1.2);
+            margin-bottom: .5rem;
+        }
+        svg{
+            transform: rotate(90deg);
+            height: 1rem;
+        }
+    }
+
+}
+
+#form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    #formulario-join{
+        select{
+            margin-top: .4rem;
             width: 100%;
-            background-color: transparent;
-            border: 0.05vw solid $white;
-            color: $white;
-            @include font-values(0.4rem, 300, 1);
-            text-transform: capitalize;
+            display: block;
+            border: none;
+            @include font-values(0.5rem, 400, 1.4);
             outline: none;
+            padding: 0.3rem;
+            background-color: #E1E1E1;
             border-radius: 0.15rem;
-            padding: 0.5rem;
-            cursor: pointer;
-            -webkit-appearance: none;
-        } 
+        }
+        textarea{
+            height: 4rem;
+        }
+        span{
+            font-size: .4rem;
+            opacity: .4;
+        }
+        #cv{
+            margin-top: .4rem;
+        }
     }
 }
 
@@ -613,33 +763,42 @@ footer{
         font-size: 6vw;
     }
     header{
-        padding: 0.8rem;
-        #logo h2{
-            font-size: 0.5rem;
-        }
+        padding: 0.6rem 0.8rem;
     }
     nav{
+        @include flex-row-setting(center, space-between);
         #nav-toggle{
             display: flex;
             flex-direction: column;
             align-items: flex-end;
         }
-        ul{
+        #logo-mobile{
+            @include flex-row-setting(center, center);
+        }
+        #nav-list{
             position: fixed;
             top: 50vh;
             left: 0;
             transform: translate(150%, -50%);
             display: block;
             transition: transform 0.3s cubic-bezier(.18,.57,.5,1.03);
-            li{
+            .nav-li{
                 display: list-item;
                 width: 100vw;
                 margin: 0;
                 text-align: center;
                 font-size: 1rem;
                 padding: 1rem 0;
-    
+                &#logo-li{
+                    display: none;
+                }
+                .underline{
+                    display: none;
+                }
             }
+        }
+        #under-servicios{
+            display: none;
         }
     } 
 
@@ -647,6 +806,9 @@ footer{
         height: 90vh;
         #arrow{
             bottom: 2vh;
+        }
+        h3{
+            width: 70%;
         }
     }
     #nosotros{
@@ -747,6 +909,13 @@ footer{
             row-gap: 10vw;
         }
     }
+    #join-us .lenguajes{
+        width: 80%;
+    }
+    #formulario-join{
+        width: 100%;
+        padding: 0 6vw;
+    }
 } 
 
 
@@ -758,10 +927,10 @@ footer{
     header{
         padding: 0.3em 0.5rem;
     }
-    nav ul{
+    nav #nav-list{
         @include flex-row-setting(center, center);
         width: 100%;
-        li{
+        .nav-li{
         display: inline;
         width: auto;
         margin-right: 1.2rem;

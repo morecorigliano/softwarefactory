@@ -23,7 +23,7 @@ header {
   background-color: transparent;
   position: fixed;
   width: 100%;
-  padding: 0.5rem 0.8rem;
+  padding: 0.4rem 0;
   z-index: 1500000;
   transition: background 0.3s ease-out; }
 
@@ -46,24 +46,29 @@ header {
   box-shadow: 0rem 0rem 1vh rgba(0, 0, 0, 0.2);
   border-bottom: 0.5px solid rgba(117, 117, 117, 0.2); }
 
+nav h1 {
+  position: absolute;
+  opacity: 0; }
+
 #logo {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; }
-  #logo h1 {
-    position: absolute;
-    opacity: 0; }
-  #logo h2 {
-    color: #36394A;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #logo svg {
+    height: 1.1rem; }
+
+#logo-mobile {
+  display: none; }
+  #logo-mobile h2 {
     font-size: 0.4rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    display: inline-block;
-    margin-left: 0.5rem; }
-  #logo svg {
-    height: 1rem; }
+    color: #666A84; }
+  #logo-mobile svg {
+    height: 1.3rem;
+    margin-right: .5rem; }
 
 #nav-toggle {
   display: none; }
@@ -82,46 +87,118 @@ header {
       margin-bottom: 0;
       transform-origin: bottom right; }
 
-nav ul {
+nav {
+  width: 100vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center; }
 
-nav ul li {
+nav #nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
+nav #nav-list .nav-li {
   display: inline;
   list-style: none;
   position: relative;
-  font-size: 0.4rem;
+  font-size: 0.3rem;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: 0.05rem;
-  margin-left: 0.8rem; }
-  nav ul li a {
-    color: white; }
-  nav ul li span {
-    position: absolute;
-    width: 0;
-    height: 200%;
-    background-color: #36394A;
-    top: -50%;
-    right: -20%;
-    z-index: -444444;
-    transform-origin: right center;
-    transition: all 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-  nav ul li:hover span {
-    animation: moveFast .25s forwards;
-    animation-timing-function: ease-in; }
-
-@keyframes moveFast {
-  20% {
-    width: 50%; }
-  60% {
+  margin-left: 1.2rem; }
+  nav #nav-list .nav-li:first-of-type {
+    margin-left: none; }
+  nav #nav-list .nav-li a {
+    color: white;
+    text-transform: uppercase; }
+    nav #nav-list .nav-li a#forma-parte {
+      color: #666A84;
+      font-weight: 700; }
+  nav #nav-list .nav-li .underline {
+    opacity: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.6); }
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; }
+    nav #nav-list .nav-li .underline .circle {
+      width: 0.2rem;
+      height: 0.2rem;
+      display: block;
+      border: 0.04rem solid #666A84;
+      border-radius: 50%; }
+    nav #nav-list .nav-li .underline .line {
+      width: 0;
+      height: 0.04rem;
+      display: block;
+      background-color: #666A84; }
+  nav #nav-list .nav-li:hover .underline {
+    opacity: 1; }
+  nav #nav-list .nav-li:hover .underline .line {
+    animation: slideIn .2s ease-out forwards; }
+  nav #nav-list .nav-li:hover #under-servicios {
+    pointer-events: auto;
+    animation: showUnder .2s ease-out forwards; }
+  nav #nav-list .nav-li:hover #under-servicios li {
+    pointer-events: auto;
+    animation: slideRight .2s ease-out forwards; }
+
+@keyframes showUnder {
+  0% {
+    opacity: 0; }
   100% {
-    width: 140%;
-    background-color: #36394A; } }
+    opacity: 1; } }
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-0.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes slideIn {
+  0% {
+    width: 10%; }
+  50% {
+    background-color: white; }
+  100% {
+    background-color: #666A84;
+    width: 80%; } }
+
+nav #under-servicios {
+  opacity: 0;
+  transform-origin: top center;
+  pointer-events: none;
+  background-color: transparent;
+  position: absolute;
+  top: 100%;
+  left: -45%;
+  width: 190%;
+  padding: .5rem; }
+  nav #under-servicios.scroll-sv {
+    background-color: black;
+    transition-delay: 2s;
+    transition: background 1.2s ease-out; }
+  nav #under-servicios li {
+    list-style: none;
+    transform: translateX(-0.5rem);
+    opacity: 0;
+    margin-left: 0;
+    margin-bottom: .5rem; }
+    nav #under-servicios li:first-of-type {
+      margin-top: .5rem; }
+    nav #under-servicios li:last-of-type {
+      margin-bottom: .1rem; }
+    nav #under-servicios li:hover a {
+      color: #666A84;
+      font-weight: 400; }
 
 #body-home {
   background-color: #121212; }
@@ -134,24 +211,40 @@ nav ul li {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
+  #banner #slider {
+    position: relative; }
   #banner h3 {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 300;
     line-height: 1.2;
     letter-spacing: 0.05rem;
     color: #eee;
     margin-left: 8vw;
-    margin-bottom: 1rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
-    animation-timing-function: ease-out; }
+    animation-timing-function: ease-out;
+    margin-bottom: 1rem;
+    position: relative;
+    top: 0;
+    left: 0; }
     #banner h3 span {
-      font-weight: 300; }
-  #banner #btn {
+      font-weight: 700; }
+    #banner h3 .fade {
+      animation-name: fade;
+      animation-duration: 1.5s; }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+  #banner .btn {
+    width: auto;
     display: block;
     border: 0.1vw solid #eee;
     margin-left: 8vw;
@@ -318,35 +411,29 @@ nav ul li {
       line-height: 1.5;
       letter-spacing: 0.05rem;
       margin-top: 1rem; }
-  .article .lenguajes {
-    width: 55%;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    row-gap: 6vw; }
-    .article .lenguajes .lng {
-      font-size: 0.4rem;
-      font-weight: 300;
-      line-height: 1.5;
-      letter-spacing: 0.05rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .article .lenguajes .lng.white svg path {
-        fill: rgba(255, 255, 255, 0.5); }
-      .article .lenguajes .lng p {
-        transition: font 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-      .article .lenguajes .lng svg {
-        height: 1.4rem;
-        margin-bottom: 0.5rem;
-        transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-      .article .lenguajes .lng .more {
-        margin-top: 0.4rem;
-        border-radius: 50%;
-        border: 1px solid #eee; }
-        .article .lenguajes .lng .more svg {
-          height: 0.2rem;
-          margin: 0.1rem; }
+
+.lenguajes {
+  width: 55%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  row-gap: 6vw; }
+  .lenguajes .lng {
+    font-size: 0.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .lenguajes .lng.white svg path {
+      fill: rgba(255, 255, 255, 0.5); }
+    .lenguajes .lng p {
+      transition: font 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+    .lenguajes .lng svg {
+      height: 1.4rem;
+      margin-bottom: 0.5rem;
+      transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
 
 #contacto {
   background-color: #262626; }
@@ -380,113 +467,147 @@ nav ul li {
     transform: rotate(90deg); }
 
 #contacto-formularios {
-  display: -webkit-flex;
-  padding: 3rem 5rem 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
   background-color: #262626; }
-  #contacto-formularios #carga-cv {
-    background-color: #36394A;
-    width: 45%;
-    height: inherit;
-    margin-right: 2rem;
-    color: #eee;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem; }
-    #contacto-formularios #carga-cv p {
-      font-size: 0.8rem;
-      font-weight: 300;
-      line-height: 1.2;
-      letter-spacing: 0.05rem; }
-    #contacto-formularios #carga-cv #cargar {
-      font-size: 0.6rem;
-      font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.05rem; }
-      #contacto-formularios #carga-cv #cargar p {
-        font-size: 0.4rem;
-        margin-bottom: 0.5rem; }
-      #contacto-formularios #carga-cv #cargar input {
-        width: 100%;
-        -webkit-appearance: none; }
-    #contacto-formularios #carga-cv #enviar-cv {
+
+#formulario, #formulario-join {
+  width: 50%; }
+  #formulario .form, #formulario-join .form {
+    position: relative;
+    margin-bottom: 1rem; }
+    #formulario .form input, #formulario .form textarea, #formulario-join .form input, #formulario-join .form textarea {
       border: none;
-      color: #eee;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 0.4rem;
-      font-size: 0.4rem;
-      font-weight: 300;
-      line-height: 1.2;
+      font-size: 0.5rem;
+      font-weight: 400;
+      line-height: 1.4;
       letter-spacing: 0.05rem;
-      text-transform: uppercase;
-      cursor: pointer;
-      border-radius: none;
-      width: 100%; }
-  #contacto-formularios #formulario {
-    width: 100%; }
-    #contacto-formularios #formulario .form {
-      position: relative;
-      margin-bottom: 1rem; }
-      #contacto-formularios #formulario .form input, #contacto-formularios #formulario .form textarea {
-        border: none;
-        font-size: 0.5rem;
-        font-weight: 400;
-        line-height: 1.4;
-        letter-spacing: 0.05rem;
-        outline: none;
-        border-radius: 0;
-        padding: 0.3rem;
-        width: 100%;
-        background-color: #E1E1E1;
-        -webkit-appearance: none;
-        border-radius: 0.15rem; }
-      #contacto-formularios #formulario .form textarea {
-        height: 5.5rem;
-        resize: none;
-        margin-top: 0.4rem; }
-      #contacto-formularios #formulario .form #label-text {
-        font-size: 0.5rem;
-        font-weight: 300;
-        line-height: 1;
-        letter-spacing: 0.05rem;
-        color: rgba(0, 0, 0, 0.8);
-        color: white; }
-      #contacto-formularios #formulario .form .moving-label {
-        font-size: 0.5rem;
-        font-weight: 300;
-        line-height: 1.4;
-        letter-spacing: 0.05rem;
-        position: absolute;
-        bottom: 0.3rem;
-        left: 0.3rem;
-        display: block;
-        transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
-        color: #121212;
-        pointer-events: none; }
-        #contacto-formularios #formulario .form .moving-label.filled {
-          transform: translate(-0.3rem, 1rem);
-          font-size: 0.4rem;
-          color: white; }
-      #contacto-formularios #formulario .form input:focus ~ label {
-        transform: translate(-0.3rem, 1rem);
-        font-size: 0.4rem;
-        color: white; }
-    #contacto-formularios #formulario #btn-enviar {
+      outline: none;
+      border-radius: 0;
+      padding: 0.3rem;
       width: 100%;
-      background-color: transparent;
-      border: 0.05vw solid #eee;
-      color: #eee;
-      font-size: 0.4rem;
+      background-color: #E1E1E1;
+      -webkit-appearance: none;
+      border-radius: 0.15rem; }
+    #formulario .form textarea, #formulario-join .form textarea {
+      height: 5.5rem;
+      resize: none;
+      margin-top: 0.4rem; }
+    #formulario .form .label-text, #formulario-join .form .label-text {
+      font-size: 0.5rem;
       font-weight: 300;
       line-height: 1;
       letter-spacing: 0.05rem;
-      text-transform: capitalize;
-      outline: none;
-      border-radius: 0.15rem;
-      padding: 0.5rem;
-      cursor: pointer;
-      -webkit-appearance: none; }
+      color: rgba(0, 0, 0, 0.8);
+      color: white; }
+    #formulario .form .moving-label, #formulario-join .form .moving-label {
+      font-size: 0.5rem;
+      font-weight: 300;
+      line-height: 1.4;
+      letter-spacing: 0.05rem;
+      position: absolute;
+      bottom: 0.3rem;
+      left: 0.3rem;
+      display: block;
+      transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
+      color: #121212;
+      pointer-events: none; }
+      #formulario .form .moving-label.filled, #formulario-join .form .moving-label.filled {
+        transform: translate(-0.3rem, 1rem);
+        font-size: 0.4rem;
+        color: white; }
+    #formulario .form input:focus ~ label, #formulario-join .form input:focus ~ label {
+      transform: translate(-0.3rem, 1rem);
+      font-size: 0.4rem;
+      color: white; }
+  #formulario #btn-enviar, #formulario #send-cv, #formulario-join #btn-enviar, #formulario-join #send-cv {
+    width: 100%;
+    background-color: transparent;
+    border: 0.05vw solid #eee;
+    color: #eee;
+    font-size: 0.4rem;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.05rem;
+    text-transform: capitalize;
+    outline: none;
+    border-radius: 0.15rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    -webkit-appearance: none; }
+
+#join {
+  background-color: #36394A; }
+
+#join-us {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
+  #join-us h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase; }
+  #join-us span {
+    background-color: #666A84;
+    height: 2rem;
+    width: .05rem;
+    margin: 1rem 0; }
+  #join-us h4 {
+    font-size: 0.7rem;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    margin-bottom: 3rem; }
+  #join-us #postulate {
+    margin: 2rem 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #join-us #postulate h3 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.05rem;
+      margin-bottom: .5rem; }
+    #join-us #postulate svg {
+      transform: rotate(90deg);
+      height: 1rem; }
+
+#form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem; }
+  #form-wrapper #formulario-join select {
+    margin-top: .4rem;
+    width: 100%;
+    display: block;
+    border: none;
+    font-size: 0.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.05rem;
+    outline: none;
+    padding: 0.3rem;
+    background-color: #E1E1E1;
+    border-radius: 0.15rem; }
+  #form-wrapper #formulario-join textarea {
+    height: 4rem; }
+  #form-wrapper #formulario-join span {
+    font-size: .4rem;
+    opacity: .4; }
+  #form-wrapper #formulario-join #cv {
+    margin-top: .4rem; }
 
 footer {
   display: flex;
@@ -567,31 +688,47 @@ footer {
   html {
     font-size: 6vw; }
   header {
-    padding: 0.8rem; }
-    header #logo h2 {
-      font-size: 0.5rem; }
-  nav #nav-toggle {
+    padding: 0.6rem 0.8rem; }
+  nav {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end; }
-  nav ul {
-    position: fixed;
-    top: 50vh;
-    left: 0;
-    transform: translate(150%, -50%);
-    display: block;
-    transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-    nav ul li {
-      display: list-item;
-      width: 100vw;
-      margin: 0;
-      text-align: center;
-      font-size: 1rem;
-      padding: 1rem 0; }
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    nav #nav-toggle {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+    nav #logo-mobile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+    nav #nav-list {
+      position: fixed;
+      top: 50vh;
+      left: 0;
+      transform: translate(150%, -50%);
+      display: block;
+      transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      nav #nav-list .nav-li {
+        display: list-item;
+        width: 100vw;
+        margin: 0;
+        text-align: center;
+        font-size: 1rem;
+        padding: 1rem 0; }
+        nav #nav-list .nav-li#logo-li {
+          display: none; }
+        nav #nav-list .nav-li .underline {
+          display: none; }
+    nav #under-servicios {
+      display: none; }
   #banner {
     height: 90vh; }
     #banner #arrow {
       bottom: 2vh; }
+    #banner h3 {
+      width: 70%; }
   #nosotros {
     width: 100%;
     margin: 0;
@@ -666,25 +803,30 @@ footer {
     .article .lenguajes {
       width: 100%;
       margin-top: 2rem;
-      row-gap: 10vw; } }
+      row-gap: 10vw; }
+  #join-us .lenguajes {
+    width: 80%; }
+  #formulario-join {
+    width: 100%;
+    padding: 0 6vw; } }
 
 @media screen and (orientation: landscape) and (max-width: 1024px) {
   html {
     font-size: 5vw; }
   header {
     padding: 0.3em 0.5rem; }
-  nav ul {
+  nav #nav-list {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%; }
-    nav ul li {
+    nav #nav-list .nav-li {
       display: inline;
       width: auto;
       margin-right: 1.2rem;
       font-size: 0.7rem; }
-      nav ul li:last-of-type {
+      nav #nav-list .nav-li:last-of-type {
         margin-right: 0; }
   #nav-toggle {
     transform: scale(0.6); }
