@@ -228,6 +228,11 @@ nav #under-servicios{
         transition-delay: 2s;
         transition: background 1.2s ease-out;
     }
+    &.scroll-sv-join{
+        background-color: $light;
+        transition-delay: 2s;
+        transition: background 1.2s ease-out;
+    }
     li{
         list-style: none;
         transform: translateX(-.5rem);
@@ -259,7 +264,14 @@ nav #under-servicios{
     position: relative;
     width: 100%;
     height: 105vh;
-    background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.404) 50%, rgba(255, 255, 255, 0) 100%), url("../img/banner.jpg");
+    overflow-y: hidden;
+    //background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.404) 50%, rgba(255, 255, 255, 0) 100%), url("../img/banner.jpg");
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -451,6 +463,12 @@ nav #under-servicios{
             right: 3rem;    
         }
     }
+    &#ux .article-text, &#testing .article-text{
+        width: 58%;
+    }
+    &#cm .article-text{
+        width: 50%;
+    }
     .article-text{
         width: 35%;
         h4{
@@ -494,6 +512,91 @@ nav #under-servicios{
                 transition: transform 0.2s cubic-bezier(.18,.57,.5,1.03);
             }
         }
+}
+
+#cm-icons{
+    @include flex-row-setting(center, center);
+    width: 45%;
+    svg{
+        width: 80%; 
+        path{
+            fill: rgba(255, 255, 255, 0.5); 
+        }
+        line{
+            stroke-dasharray: 50;
+            animation: dash 5s linear infinite;
+        }
+
+    }
+}
+
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 800;
+    }
+}
+
+@keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+#ux-icons{
+    @include flex-row-setting(center, center);
+    margin-right: 2rem;
+    width: 80%;
+    svg{
+        width: 55%; 
+        path, line, circle, rect{
+            stroke: rgba(255, 255, 255, 0.5); 
+        }
+        #content line, #content rect{
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            animation: draw 2s linear infinite;
+        }
+        #popup line{
+            stroke-dasharray: 50;
+            animation: dash 5s linear infinite;
+        }
+
+    }
+}
+
+#test-icons{
+    @include flex-row-setting(center, center);
+    width: 80%;
+    svg{
+        width: 55%; 
+        path, line, circle, rect{
+            stroke: rgba(255, 255, 255, 0.5); 
+
+        }
+        #config{
+            fill: rgba(255, 255, 255, 0.5); 
+            path{
+                transform-origin: center center;
+                animation: rotate 2s linear infinite;
+            }
+        }
+        #text line, #text path{
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            animation: draw 2s linear infinite;
+        }
+        #lupa circle{
+            stroke-dasharray: 100;
+            animation: dash 5s linear infinite;
+        }
+
+    }
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }
 
 ////// contacto /////////
@@ -804,6 +907,14 @@ footer{
 
     #banner{
         height: 90vh;
+        overflow-x: hidden;
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 90vh;
+            width: auto;
+        }
         #arrow{
             bottom: 2vh;
         }
@@ -899,6 +1010,16 @@ footer{
                 top: 0;
                 left: 0;   
             }
+        }
+        #ux-icons, #cm-icons, #test-icons{
+            width: 100%;
+            margin-top: 8vw;
+            &#test-icons{
+                margin-left: -8vw;
+            }
+        }
+        &#ux .article-text, &#testing .article-text, &#cm .article-text{
+            width: 100%;
         }
         .article-text{
             width: 100%;

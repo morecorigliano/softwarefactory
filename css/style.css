@@ -186,6 +186,10 @@ nav #under-servicios {
     background-color: black;
     transition-delay: 2s;
     transition: background 1.2s ease-out; }
+  nav #under-servicios.scroll-sv-join {
+    background-color: #36394A;
+    transition-delay: 2s;
+    transition: background 1.2s ease-out; }
   nav #under-servicios li {
     list-style: none;
     transform: translateX(-0.5rem);
@@ -207,7 +211,7 @@ nav #under-servicios {
   position: relative;
   width: 100%;
   height: 105vh;
-  background-image: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.404) 50%, rgba(255, 255, 255, 0) 100%), url("../img/banner.jpg");
+  overflow-y: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -216,6 +220,11 @@ nav #under-servicios {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
+  #banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
   #banner #slider {
     position: relative; }
   #banner h3 {
@@ -391,6 +400,10 @@ nav #under-servicios {
     .article.right span {
       position: absolute;
       right: 3rem; }
+  .article#ux .article-text, .article#testing .article-text {
+    width: 58%; }
+  .article#cm .article-text {
+    width: 50%; }
   .article .article-text {
     width: 35%; }
     .article .article-text h4 {
@@ -434,6 +447,76 @@ nav #under-servicios {
       height: 1.4rem;
       margin-bottom: 0.5rem;
       transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+
+#cm-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 45%; }
+  #cm-icons svg {
+    width: 80%; }
+    #cm-icons svg path {
+      fill: rgba(255, 255, 255, 0.5); }
+    #cm-icons svg line {
+      stroke-dasharray: 50;
+      animation: dash 5s linear infinite; }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 800; } }
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; } }
+
+#ux-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  width: 80%; }
+  #ux-icons svg {
+    width: 55%; }
+    #ux-icons svg path, #ux-icons svg line, #ux-icons svg circle, #ux-icons svg rect {
+      stroke: rgba(255, 255, 255, 0.5); }
+    #ux-icons svg #content line, #ux-icons svg #content rect {
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: draw 2s linear infinite; }
+    #ux-icons svg #popup line {
+      stroke-dasharray: 50;
+      animation: dash 5s linear infinite; }
+
+#test-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%; }
+  #test-icons svg {
+    width: 55%; }
+    #test-icons svg path, #test-icons svg line, #test-icons svg circle, #test-icons svg rect {
+      stroke: rgba(255, 255, 255, 0.5); }
+    #test-icons svg #config {
+      fill: rgba(255, 255, 255, 0.5); }
+      #test-icons svg #config path {
+        transform-origin: center center;
+        animation: rotate 2s linear infinite; }
+    #test-icons svg #text line, #test-icons svg #text path {
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: draw 2s linear infinite; }
+    #test-icons svg #lupa circle {
+      stroke-dasharray: 100;
+      animation: dash 5s linear infinite; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 #contacto {
   background-color: #262626; }
@@ -724,7 +807,14 @@ footer {
     nav #under-servicios {
       display: none; }
   #banner {
-    height: 90vh; }
+    height: 90vh;
+    overflow-x: hidden; }
+    #banner video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 90vh;
+      width: auto; }
     #banner #arrow {
       bottom: 2vh; }
     #banner h3 {
@@ -798,6 +888,13 @@ footer {
         position: relative;
         top: 0;
         left: 0; }
+    .article #ux-icons, .article #cm-icons, .article #test-icons {
+      width: 100%;
+      margin-top: 8vw; }
+      .article #ux-icons#test-icons, .article #cm-icons#test-icons, .article #test-icons#test-icons {
+        margin-left: -8vw; }
+    .article#ux .article-text, .article#testing .article-text, .article#cm .article-text {
+      width: 100%; }
     .article .article-text {
       width: 100%; }
     .article .lenguajes {

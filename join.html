@@ -39,7 +39,7 @@
             </li>
             <li id="servicios-li" class="nav-li">
               <a href="index.html#servicios">Servicios</a>
-              <ul id="under-servicios">
+              <ul id="under-servicios" class="scroll-sv-join">
                 <li><a href="index.html#frontend">Desarrollo Frontend</a></li>
                 <li><a href="index.html#backend">Desarrollo Backend</a></li>
                 <li><a href="index.html#cm">Community Management</a></li>
@@ -178,7 +178,7 @@
 
         <div id="form-wrapper">
 
-        <form action="" method="post" enctype="" id="formulario-join">
+        <form action="join.php" method="post" enctype="application/x-www-form-urlencoded" id="formulario-join">
             <div class="form">
                 <input type="text" name="nombre" required>
                 <label for="nombre" class="moving-label">Nombre</label>
@@ -205,7 +205,7 @@
               <input type="file" accept="application/pdf, image/jpeg" id="cv">
             </div>
             <div class="form">
-            <label for="mensaje" class="label-text">¿Queres contarnos algo mas?</label>
+            <label for="mensaje" class="label-text">¿Querés contarnos algo mas?</label>
             <textarea class="form-control" name="mensaje" id="mensaje"></textarea>
             </div>
             <input type="submit" value="enviar" id="send-cv">
@@ -270,4 +270,5 @@
     </footer>
 </body>
 <script src="js/script.js"></script>
+<script src="js/join.js"></script>
 </html>

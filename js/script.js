@@ -1,4 +1,3 @@
-var nav = document.getElementById("header");
 var navToggle = document.getElementById("nav-toggle");
 var navBg = document.getElementById("mobile-bg");
 var navList = document.getElementById("nav-list");
@@ -8,22 +7,6 @@ var lineOne = document.getElementById("line-one");
 var lineTwo = document.getElementById("line-two");
 var lineThree = document.getElementById("line-three");
 var inicio = document.getElementById("logo");
-var underServicios = document.getElementById("under-servicios");
-
-var mediaQueries = window.matchMedia("(max-width: 1024px)");
-myFunction(mediaQueries);
-mediaQueries.addListener(myFunction);
-
-window.onscroll = function() {
-  "use strict";
-  if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
-    nav.classList.add("scroll");
-    underServicios.classList.add("scroll-sv");
-  } else{
-    nav.classList.remove("scroll");
-    underServicios.classList.remove("scroll-sv");
-  }
-};
 
 var navToggleClicks = 1
 
@@ -113,19 +96,4 @@ for (var i = 0; i < formInputs.length; i++) {
         this.parentElement.children[1].classList.add("filled");
         }
     });
-}
-
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("fade");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 6000);
 }
