@@ -1,6 +1,6 @@
 <?php
 
-$enviaPara = 'morecorigliano@gmail.com'; 
+$enviaPara = 'humanresources@dsklabs.com'; 
 
 $subject = 'Contacto DS'; 
 
