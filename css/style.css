@@ -26,6 +26,27 @@ header {
   padding: 0.4rem 0;
   z-index: 1500000;
   transition: background 0.3s ease-out; }
+  header #idioma {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    header #idioma p {
+      color: white;
+      font-size: 0.3rem;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-right: .1rem; }
+    header #idioma svg {
+      width: .6rem;
+      display: inline-block; }
 
 #mobile-bg {
   position: fixed;
@@ -59,6 +80,7 @@ nav h1 {
     height: 1.1rem; }
 
 #logo-mobile {
+  z-index: 45648888888;
   display: none; }
   #logo-mobile h2 {
     font-size: 0.4rem;
@@ -182,6 +204,9 @@ nav #under-servicios {
   left: -45%;
   width: 190%;
   padding: .5rem; }
+  nav #under-servicios.eng {
+    left: -55%;
+    width: 220%; }
   nav #under-servicios.scroll-sv {
     background-color: black;
     transition-delay: 2s;
@@ -265,9 +290,7 @@ nav #under-servicios {
     line-height: 1.2;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
+    animation: moveInLeft 1s ease-out forwards; }
   #banner #arrow {
     position: absolute;
     bottom: 10vh;
@@ -650,7 +673,7 @@ nav #under-servicios {
     letter-spacing: 0.05rem;
     margin-bottom: 3rem; }
   #join-us #postulate {
-    margin: 2rem 0 1.5rem 0;
+    margin: 3rem 0 1.5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -664,6 +687,8 @@ nav #under-servicios {
     #join-us #postulate svg {
       transform: rotate(90deg);
       height: 1rem; }
+  #join-us #join-lng {
+    grid-template-columns: 20% 20% 20% 20% 20%; }
 
 #form-wrapper {
   display: flex;
@@ -715,9 +740,9 @@ footer {
     footer .footer-info p {
       display: inline-block; }
     footer .footer-info svg {
-      width: 0.8rem;
+      width: 2.2rem;
       display: inline-block;
-      margin-right: 0.5rem; }
+      margin-right: .2rem; }
   footer .footer-contacto {
     display: flex;
     flex-direction: row;
@@ -748,7 +773,7 @@ footer {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-50%); }
+    transform: translateX(-20%); }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -772,6 +797,12 @@ footer {
     font-size: 6vw; }
   header {
     padding: 0.6rem 0.8rem; }
+    header #idioma {
+      right: calc(14vw + 0.8rem); }
+      header #idioma p {
+        font-size: 0.5rem; }
+      header #idioma svg {
+        width: .8rem; }
   nav {
     display: flex;
     flex-direction: row;
@@ -817,8 +848,8 @@ footer {
       width: auto; }
     #banner #arrow {
       bottom: 2vh; }
-    #banner h3 {
-      width: 70%; }
+    #banner #slider {
+      width: 80%; }
   #nosotros {
     width: 100%;
     margin: 0;

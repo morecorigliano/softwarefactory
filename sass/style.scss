@@ -46,6 +46,24 @@ header{
     padding: 0.4rem 0;
     z-index: 1500000;
     transition: background 0.3s ease-out;
+    #idioma{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem;
+        @include flex-row-setting(center, center);
+        p{
+            color: white;
+            @include font-values(0.3rem, 300, 1.2);
+            text-transform: uppercase;
+            display: inline-block;
+            margin-right: .1rem;
+        }
+        svg{
+            width: .6rem;
+            display: inline-block;
+        }
+    }
 }
 
 #mobile-bg{
@@ -85,6 +103,7 @@ nav h1{
 }
 
 #logo-mobile{
+    z-index: 45648888888;
     display: none;
     h2{
         @include font-values(0.4rem, 700, 1.2);
@@ -223,6 +242,10 @@ nav #under-servicios{
     left: -45%;
     width: 190%;
     padding: .5rem;
+    &.eng{
+        left: -55%;
+        width: 220%;
+    }
     &.scroll-sv{
         background-color: black;
         transition-delay: 2s;
@@ -317,9 +340,7 @@ nav #under-servicios{
         text-align: center;
         @include font-values(0.5rem, 400, 1.2);
         text-transform: uppercase;
-        animation-name: moveInLeft;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
+        animation: moveInLeft 1s ease-out forwards;
     }
     #arrow{
         position: absolute;
@@ -732,7 +753,7 @@ nav #under-servicios{
         margin-bottom: 3rem;
     }
     #postulate{
-        margin: 2rem 0 1.5rem 0;
+        margin: 3rem 0 1.5rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -745,6 +766,9 @@ nav #under-servicios{
             transform: rotate(90deg);
             height: 1rem;
         }
+    }
+    #join-lng{
+        grid-template-columns: 20% 20% 20% 20% 20%;
     }
 
 }
@@ -798,9 +822,9 @@ footer{
             display: inline-block;
         }
         svg{
-            width: 0.8rem;
+            width: 2.2rem;
             display: inline-block;
-            margin-right: 0.5rem;
+            margin-right: .2rem;
         }
     }
     .footer-contacto{
@@ -830,7 +854,7 @@ footer{
 @keyframes moveInLeft{
     0%{
         opacity: 0;
-        transform: translateX(-50%);
+        transform: translateX(-20%);
     }
     100%{
         opacity: 1;
@@ -867,6 +891,15 @@ footer{
     }
     header{
         padding: 0.6rem 0.8rem;
+        #idioma{
+            right: calc(14vw + 0.8rem);
+            p{
+                font-size: 0.5rem;
+            }
+            svg{
+                width: .8rem;
+            }
+        }
     }
     nav{
         @include flex-row-setting(center, space-between);
@@ -918,8 +951,8 @@ footer{
         #arrow{
             bottom: 2vh;
         }
-        h3{
-            width: 70%;
+        #slider{
+            width: 80%;
         }
     }
     #nosotros{
