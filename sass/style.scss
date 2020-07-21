@@ -46,6 +46,15 @@ header{
     padding: 0.4rem 0;
     z-index: 1500000;
     transition: background 0.3s ease-out;
+    #logo-text{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+        svg{
+            width: 1.8rem;
+        }
+    }
     #idioma{
         position: absolute;
         top: 50%;
@@ -106,12 +115,15 @@ nav h1{
     z-index: 45648888888;
     display: none;
     h2{
-        @include font-values(0.4rem, 700, 1.2);
-        color: #666A84;  
+        @include font-values(0.7rem, 700, 1.2);
+        color: white;  
     }
     svg{
         height: 1.3rem;
-        margin-right: .5rem;
+    }
+    svg:last-of-type{
+        width: 2.5rem;
+        margin-left: .5rem;
     }
 }
 
@@ -900,6 +912,9 @@ footer{
                 width: .8rem;
             }
         }
+        #logo-text{
+            display: none;
+        }
     }
     nav{
         @include flex-row-setting(center, space-between);
@@ -942,9 +957,6 @@ footer{
         height: 90vh;
         overflow-x: hidden;
         video{
-            position: absolute;
-            top: 0;
-            left: 0;
             height: 90vh;
             width: auto;
         }
@@ -1080,6 +1092,12 @@ footer{
     }
     header{
         padding: 0.3em 0.5rem;
+        #logo-mobile h2{
+            font-size: 0.5rem;
+        }
+        #idioma{
+            right: 3rem;
+        }
     }
     nav #nav-list{
         @include flex-row-setting(center, center);
@@ -1104,6 +1122,13 @@ footer{
         }
         #btn{
             font-size: 0.4rem;
+        }
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 135vh;
         }
     }
     #summary{

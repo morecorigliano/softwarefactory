@@ -26,6 +26,13 @@ header {
   padding: 0.4rem 0;
   z-index: 1500000;
   transition: background 0.3s ease-out; }
+  header #logo-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem; }
+    header #logo-text svg {
+      width: 1.8rem; }
   header #idioma {
     position: absolute;
     top: 50%;
@@ -83,14 +90,16 @@ nav h1 {
   z-index: 45648888888;
   display: none; }
   #logo-mobile h2 {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    color: #666A84; }
+    color: white; }
   #logo-mobile svg {
-    height: 1.3rem;
-    margin-right: .5rem; }
+    height: 1.3rem; }
+  #logo-mobile svg:last-of-type {
+    width: 2.5rem;
+    margin-left: .5rem; }
 
 #nav-toggle {
   display: none; }
@@ -803,6 +812,8 @@ footer {
         font-size: 0.5rem; }
       header #idioma svg {
         width: .8rem; }
+    header #logo-text {
+      display: none; }
   nav {
     display: flex;
     flex-direction: row;
@@ -841,9 +852,6 @@ footer {
     height: 90vh;
     overflow-x: hidden; }
     #banner video {
-      position: absolute;
-      top: 0;
-      left: 0;
       height: 90vh;
       width: auto; }
     #banner #arrow {
@@ -943,6 +951,10 @@ footer {
     font-size: 5vw; }
   header {
     padding: 0.3em 0.5rem; }
+    header #logo-mobile h2 {
+      font-size: 0.5rem; }
+    header #idioma {
+      right: 3rem; }
   nav #nav-list {
     display: flex;
     flex-direction: row;
@@ -964,6 +976,12 @@ footer {
       font-size: 1rem; }
     #banner #btn {
       font-size: 0.4rem; }
+    #banner video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 135vh; }
   #summary #servicios-icons {
     grid-template-columns: repeat(4, 1fr); }
     #summary #servicios-icons .icon {
