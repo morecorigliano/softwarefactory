@@ -229,7 +229,7 @@
 
         <div id="form-wrapper">
 
-        <form action="join.php" method="post" enctype="application/x-www-form-urlencoded" id="formulario-join">
+        <form action="join.php" method="post" enctype="multipart/form-data" id="formulario-join">
             <div class="form">
                 <input type="text" name="nombre" required>
                 <label for="nombre" class="moving-label">Name</label>
@@ -254,7 +254,7 @@
             </div>
             <div class="form">
               <label for="mensaje" class="label-text">Upload your resume<span>  JPEG/PDF format</span></label>
-              <input type="file" accept="application/pdf, image/jpeg" id="cv">
+              <input type="file" accept="application/pdf, image/jpeg" id="cv" name="uploaded_file">
             </div>
             <div class="form">
             <label for="mensaje" class="label-text">Would you like to add something else?</label>
