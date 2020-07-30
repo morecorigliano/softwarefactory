@@ -718,18 +718,18 @@
 
       <div id="contacto-formularios">
 
-        <form action="../contacto.php" method="post" enctype="multipart/form-data" id="formulario">
+        <form action="mailto:hr@skysoftlab.com?subject=Contacto SkySoft" method="post" enctype="text/plain" id="formulario">
             <div class="form" data-aos="zoom-in">
-                <input type="text" name="nombre" required>
+                <input type="text" name="Nombre" id="nombre" required>
                 <label for="nombre" class="moving-label">Nombre</label>
             </div>
             <div class="form" data-aos="zoom-in">
-                <input type="email" name="correo" required>
+                <input type="email" name="Correo" id="correo" required>
                 <label for="correo" class="moving-label">Correo electrónico</label>
             </div>
             <div class="form" data-aos="zoom-in">
             <label for="mensaje" class="label-text">¿En qué te podemos ayudar?</label>
-            <textarea class="form-control" name="mensaje" id="mensaje"></textarea>
+            <textarea class="form-control" name="Mensaje" id="mensaje"></textarea>
             </div>
             <input type="submit" value="enviar" id="btn-enviar">
         </form>

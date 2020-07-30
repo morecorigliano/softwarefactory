@@ -229,36 +229,32 @@
 
         <div id="form-wrapper">
 
-        <form action="join.php" method="post" enctype="multipart/form-data" id="formulario-join">
+        <form action="mailto:hr@skysoftlab.com?subject=Join SkySoft" method="post" enctype="text/plain" id="formulario-join">
             <div class="form">
-                <input type="text" name="nombre" required>
-                <label for="nombre" class="moving-label">Name</label>
+                <input type="text" name="Name" id="name" required>
+                <label for="name" class="moving-label">Name</label>
             </div>
             <div class="form">
-                <input type="email" name="correo" required>
-                <label for="correo" class="moving-label">Email</label>
+                <input type="email" name="Email" id="email" required>
+                <label for="email" class="moving-label">Email</label>
             </div>
             <div class="form">
-              <label for="mensaje" class="label-text">What job are you interested in?</label>
-            <select id="puesto" name="puesto">
-              <option value="javascript">JavaScript</option>
-              <option value="c">C++</option>
-              <option value="python">Python</option>
-              <option value="firebase">Firebase</option>
-              <option value="java">Java</option>
-              <option value="r">R</option>
-              <option value="full stack">Full Stack</option>
-              <option value="seo sem">SEO/SEM</option>
-              <option value="otros">Other</option>
+              <label for="puesto" class="label-text">What job are you interested in?</label>
+            <select id="puesto" name="Experienced">
+              <option value="Java Script">JavaScript</option>
+              <option value="C++">C++</option>
+              <option value="Python">Python</option>
+              <option value="Firebase">Firebase</option>
+              <option value="Java">Java</option>
+              <option value="R">R</option>
+              <option value="Full Stack">Full Stack</option>
+              <option value="SEO/SEM">SEO/SEM</option>
+              <option value="Otros">Other</option>
             </select>
             </div>
             <div class="form">
-              <label for="mensaje" class="label-text">Upload your resume<span>  JPEG/PDF format</span></label>
-              <input type="file" accept="application/pdf, image/jpeg" id="cv" name="uploaded_file">
-            </div>
-            <div class="form">
-            <label for="mensaje" class="label-text">Would you like to add something else?</label>
-            <textarea class="form-control" name="mensaje" id="mensaje"></textarea>
+            <label for="message" class="label-text">Would you like to add something else?</label>
+            <textarea class="form-control" name="Message" id="message"></textarea>
             </div>
             <input type="submit" value="submit" id="send-cv">
         </form>

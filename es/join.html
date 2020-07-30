@@ -242,36 +242,32 @@
 
         <div id="form-wrapper">
 
-        <form action="../join.php" method="post" enctype="multipart/form-data" id="formulario-join">
+        <form action="mailto:hr@skysoftlab.com?subject=Formá Parte SkySoft" method="post" enctype="text/plain" id="formulario-join">
             <div class="form">
-                <input type="text" name="nombre" required>
+                <input type="text" name="Nombre" id="nombre" required>
                 <label for="nombre" class="moving-label">Nombre</label>
             </div>
             <div class="form">
-                <input type="email" name="correo" required>
+                <input type="email" name="Correo" id="correo" required>
                 <label for="correo" class="moving-label">Correo electrónico</label>
             </div>
             <div class="form">
-              <label for="mensaje" class="label-text">¿En qué puesto estás interesado?</label>
-            <select id="puesto" name="puesto">
-              <option value="javascript">JavaScript</option>
-              <option value="c">C++</option>
-              <option value="python">Python</option>
-              <option value="firebase">Firebase</option>
-              <option value="java">Java</option>
-              <option value="r">R</option>
-              <option value="full stack">Full Stack</option>
-              <option value="seo sem">SEO/SEM</option>
-              <option value="otros">Otros</option>
+              <label for="puesto" class="label-text">¿En qué puesto estás interesado?</label>
+            <select id="puesto" name="Puesto">
+              <option value="Java Script">JavaScript</option>
+              <option value="C++">C++</option>
+              <option value="Python">Python</option>
+              <option value="Firebase">Firebase</option>
+              <option value="Java">Java</option>
+              <option value="R">R</option>
+              <option value="Full Stack">Full Stack</option>
+              <option value="SEO/SEM">SEO/SEM</option>
+              <option value="Otros">Otros</option>
             </select>
             </div>
             <div class="form">
-              <label for="mensaje" class="label-text">Cargá tu C.V  <span>Formato JPEG/PDF</span></label>
-              <input type="file" accept="application/pdf, image/jpeg" id="cv" name="uploaded_file">
-            </div>
-            <div class="form">
             <label for="mensaje" class="label-text">¿Querés contarnos algo mas?</label>
-            <textarea class="form-control" name="mensaje" id="mensaje"></textarea>
+            <textarea class="form-control" name="Mensaje" id="mensaje"></textarea>
             </div>
             <input type="submit" value="enviar" id="send-cv">
         </form>
