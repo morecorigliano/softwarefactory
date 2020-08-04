@@ -893,9 +893,14 @@ footer {
       margin-top: -8vw;
       top: 15vw;
       display: block; }
+    #nosotros #border {
+      position: absolute;
+      top: 17vw;
+      left: 3vw;
+      width: 75vw;
+      height: 50vw; }
     #nosotros img:hover {
-      -webkit-filter: grayscale(100%);
-      transform: translateX(0) scale(1); }
+      -webkit-filter: grayscale(100%); }
   footer {
     display: flex;
     flex-direction: column;
