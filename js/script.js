@@ -71,16 +71,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-var lng = document.getElementsByClassName("lng");
+var white = document.getElementsByClassName("white");
 
-for (var i = 0; i < lng.length; i++) {
-  lng[i].addEventListener("mouseover", function(){
+for (var i = 0; i < white.length; i++) {
+  white[i].addEventListener("mouseover", function(){
     this.classList.remove("white");
     this.children[0].style.transform = "scale(1.3)";
     this.children[1].style.fontWeight = "700";
   });
-  lng[i].addEventListener("mouseout", function(){
+  white[i].addEventListener("mouseout", function(){
     this.classList.add("white");
+    this.children[0].style.transform = "scale(1)";
+    this.children[1].style.fontWeight = "300";
+  });
+}
+
+var blue = document.getElementsByClassName("blue");
+
+for (var i = 0; i < blue.length; i++) {
+  blue[i].addEventListener("mouseover", function(){
+    this.classList.remove("blue");
+    this.children[0].style.transform = "scale(1.3)";
+    this.children[1].style.fontWeight = "700";
+  });
+  blue[i].addEventListener("mouseout", function(){
+    this.classList.add("blue");
     this.children[0].style.transform = "scale(1)";
     this.children[1].style.fontWeight = "300";
   });
