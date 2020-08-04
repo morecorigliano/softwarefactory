@@ -8,7 +8,11 @@ var lineTwo = document.getElementById("line-two");
 var lineThree = document.getElementById("line-three");
 var inicio = document.getElementById("logo");
 
-var navToggleClicks = 1
+var navToggleClicks = 1;
+
+var mediaQueries = window.matchMedia("(max-width: 1024px)");
+myFunction(mediaQueries);
+mediaQueries.addListener(myFunction);
 
 function myFunction(mediaQueries){ 
   

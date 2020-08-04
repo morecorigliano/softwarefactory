@@ -61,7 +61,7 @@ header {
   top: 0;
   height: 500vh;
   width: 500vw;
-  background-color: #333333;
+  background-color: #fff;
   z-index: -15000;
   transform-origin: top right;
   transform: scale(0);
@@ -134,12 +134,12 @@ nav #nav-list {
 
 nav #nav-list .nav-li {
   display: inline;
-  list-style: none;
-  position: relative;
   font-size: 0.3rem;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.05rem;
+  list-style: none;
+  position: relative;
   margin-left: 1.2rem; }
   nav #nav-list .nav-li:first-of-type {
     margin-left: none; }
@@ -268,7 +268,7 @@ nav #under-servicios {
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    color: #5e5e5e;
+    color: #333333;
     margin-left: 8vw;
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -319,7 +319,7 @@ nav #under-servicios {
 #nosotros {
   width: 85vw;
   margin: 0 7.5vw;
-  background-color: #b1b1b1;
+  background-color: #4DB0E2;
   position: relative;
   top: -10vh;
   padding: 10vw 6vw 15vw 6vw;
@@ -343,7 +343,7 @@ nav #under-servicios {
       margin-bottom: 0.4rem; }
     #nosotros #nosotros-text p {
       font-size: 0.6rem;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.2;
       letter-spacing: 0.05rem;
       color: #fff;
@@ -357,7 +357,7 @@ nav #under-servicios {
   #nosotros #nosotros-img {
     position: relative; }
   #nosotros #border {
-    border: #4DB0E2 0.06rem solid;
+    border: #fff 0.06rem solid;
     position: absolute;
     top: -5%;
     left: 28%;
@@ -386,17 +386,17 @@ nav #under-servicios {
     margin-bottom: 3rem;
     text-transform: uppercase;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    color: #4DB0E2; }
+    color: #5e5e5e; }
   #summary #servicios-icons {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%; }
     #summary #servicios-icons .icon svg path {
-      fill: #b1b1b1; }
+      fill: #4DB0E2; }
     #summary #servicios-icons .icon svg circle {
-      fill: #b1b1b1; }
+      fill: #4DB0E2; }
     #summary #servicios-icons a {
       display: flex;
       flex-direction: column;
@@ -408,14 +408,14 @@ nav #under-servicios {
       #summary #servicios-icons a .line {
         display: block;
         height: 1.5rem;
-        width: .12vw;
+        width: .06rem;
         background-color: #4DB0E2;
         margin: 1vw 0;
         transform-origin: bottom center;
         transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
       #summary #servicios-icons a p {
         width: 55%;
-        color: #b1b1b1;
+        color: #333333;
         font-size: 0.5rem;
         font-weight: 400;
         line-height: 1.2;
@@ -425,12 +425,16 @@ nav #under-servicios {
     #summary #servicios-icons .icon:hover svg {
       transform: translateY(1rem); }
     #summary #servicios-icons .icon:hover svg path {
-      fill: #4DB0E2; }
+      fill: #5e5e5e; }
     #summary #servicios-icons .icon:hover svg circle {
-      fill: #4DB0E2; }
+      fill: #5e5e5e; }
 
 .article {
-  background-color: #b1b1b1;
+  background-color: #5e5e5e;
+  font-size: 0.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
   padding: 3rem;
   color: #fff;
   display: flex;
@@ -443,18 +447,16 @@ nav #under-servicios {
     color: #5e5e5e;
     text-align: right; }
     .article.right .article-text {
-      order: 2; }
+      order: 2;
+      font-weight: 400; }
       .article.right .article-text h4 {
         color: #4DB0E2; }
     .article.right .lenguajes {
       order: 1; }
-    .article.right span {
-      position: absolute;
-      right: 3rem; }
   .article#ux .article-text, .article#testing .article-text {
     width: 58%; }
   .article#cm .article-text {
-    width: 50%; }
+    width: 45%; }
   .article .article-text {
     width: 35%; }
     .article .article-text h4 {
@@ -464,16 +466,7 @@ nav #under-servicios {
       letter-spacing: 0.05rem;
       color: #fff;
       margin-bottom: 0.4rem; }
-    .article .article-text span {
-      width: 1.2rem;
-      height: 0.1rem;
-      background-color: #fff;
-      display: block; }
     .article .article-text p {
-      font-size: 0.5rem;
-      font-weight: 300;
-      line-height: 1.5;
-      letter-spacing: 0.05rem;
       margin-top: 1rem; }
 
 .lenguajes {
@@ -491,9 +484,9 @@ nav #under-servicios {
     justify-content: center;
     align-items: center; }
     .lenguajes .lng.white svg path {
-      fill: rgba(255, 255, 255, 0.5); }
+      fill: rgba(255, 255, 255, 0.8); }
     .lenguajes .lng.blue svg path {
-      fill: rgba(77, 176, 226, 0.5); }
+      fill: rgba(77, 176, 226, 0.8); }
     .lenguajes .lng p {
       transition: font 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
     .lenguajes .lng svg {
@@ -510,7 +503,7 @@ nav #under-servicios {
   #cm-icons svg {
     width: 80%; }
     #cm-icons svg path {
-      fill: rgba(255, 255, 255, 0.5); }
+      fill: rgba(255, 255, 255, 0.8); }
     #cm-icons svg line {
       stroke-dasharray: 50;
       animation: dash 5s linear infinite; }
@@ -533,7 +526,7 @@ nav #under-servicios {
   #ux-icons svg {
     width: 55%; }
     #ux-icons svg path, #ux-icons svg line, #ux-icons svg circle, #ux-icons svg rect, #ux-icons svg ellipse {
-      stroke: rgba(77, 176, 226, 0.5); }
+      stroke: rgba(77, 176, 226, 0.8); }
     #ux-icons svg #content line, #ux-icons svg #content rect {
       stroke-dasharray: 800;
       stroke-dashoffset: 800;
@@ -551,9 +544,9 @@ nav #under-servicios {
   #test-icons svg {
     width: 55%; }
     #test-icons svg path, #test-icons svg line, #test-icons svg circle, #test-icons svg rect {
-      stroke: rgba(255, 255, 255, 0.5); }
+      stroke: rgba(255, 255, 255, 0.8); }
     #test-icons svg #config {
-      fill: rgba(255, 255, 255, 0.5); }
+      fill: rgba(255, 255, 255, 0.8); }
       #test-icons svg #config path {
         transform-origin: center center;
         animation: rotate 2s linear infinite; }
@@ -572,7 +565,7 @@ nav #under-servicios {
     transform: rotate(360deg); } }
 
 #contacto {
-  background-color: #b1b1b1; }
+  background-color: #4DB0E2; }
 
 #call-contacto {
   padding: 3rem 0 2.5rem 0;
@@ -585,7 +578,7 @@ nav #under-servicios {
   justify-content: center; }
   #call-contacto p {
     font-size: 0.6rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0.05rem;
     color: #5e5e5e;
@@ -608,7 +601,7 @@ nav #under-servicios {
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
-  background-color: #b1b1b1; }
+  background-color: #4DB0E2; }
 
 #formulario, #formulario-join {
   width: 50%; }
@@ -866,6 +859,12 @@ footer {
         padding: 1rem 0; }
         nav #nav-list .nav-li#logo-li {
           display: none; }
+        nav #nav-list .nav-li a#forma-parte {
+          color: #4DB0E2;
+          background-color: transparent;
+          padding: 0;
+          border-radius: 0;
+          font-weight: 700; }
         nav #nav-list .nav-li .underline {
           display: none; }
     nav #under-servicios {
@@ -947,10 +946,6 @@ footer {
     display: block; }
     .article.right {
       text-align: left; }
-      .article.right span {
-        position: relative;
-        top: 0;
-        left: 0; }
     .article #ux-icons, .article #cm-icons, .article #test-icons {
       width: 100%;
       margin-top: 8vw; }
