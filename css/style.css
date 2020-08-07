@@ -453,6 +453,8 @@ nav #under-servicios {
         color: #4DB0E2; }
     .article.right .lenguajes {
       order: 1; }
+    .article.right .lng-text {
+      text-align: left; }
   .article#ux .article-text, .article#testing .article-text, .article#seo .article-text {
     width: 58%; }
   .article#cm .article-text {
@@ -482,7 +484,11 @@ nav #under-servicios {
   width: 55%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  row-gap: 6vw; }
+  row-gap: 6vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer; }
   .lenguajes .lng {
     font-size: 0.4rem;
     font-weight: 300;
@@ -502,6 +508,71 @@ nav #under-servicios {
       height: 1.4rem;
       margin-bottom: 0.5rem;
       transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+    .lenguajes .lng .show {
+      margin-top: 0.3rem;
+      color: #4DB0E2;
+      width: .8rem;
+      height: .8rem;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border: 0.035rem solid #4DB0E2;
+      font-size: 0.45rem;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.05rem; }
+      .lenguajes .lng .show.first {
+        color: #fff;
+        border-color: #fff; }
+
+.lng-text {
+  width: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: none; }
+  .lng-text .lng-back {
+    font-size: 0.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    .lng-text .lng-back svg {
+      height: 1.4rem;
+      margin-bottom: 0.5rem;
+      transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+    .lng-text .lng-back .show {
+      transform: rotate(180deg);
+      margin-top: 0.3rem;
+      color: #4DB0E2;
+      width: .8rem;
+      height: .8rem;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border: 0.035rem solid #4DB0E2;
+      font-size: 0.45rem;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.05rem; }
+      .lng-text .lng-back .show.first {
+        color: #fff;
+        border-color: #fff; }
+  .lng-text .info {
+    width: 60%;
+    margin-left: 2rem; }
 
 #cm-icons {
   display: flex;
@@ -601,12 +672,19 @@ nav #under-servicios {
     transform: rotate(360deg); } }
 
 #contacto {
-  background-color: #fff; }
+  position: relative; }
+  #contacto #particle-js {
+    background-color: #4DB0E2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100; }
 
 #call-contacto {
-  padding: 3rem 0 2.5rem 0;
-  -webkit-clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
-  background-color: #4DB0E2;
+  padding-top: 3rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -636,8 +714,7 @@ nav #under-servicios {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
-  background-color: #fff; }
+  padding: 1rem 0 3rem 0; }
 
 #formulario, #formulario-join {
   width: 50%; }
@@ -663,13 +740,13 @@ nav #under-servicios {
       margin-top: 0.4rem; }
     #formulario .form .label-text, #formulario-join .form .label-text {
       font-size: 0.5rem;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1;
       letter-spacing: 0.05rem;
-      color: #000000; }
+      color: #fff; }
     #formulario .form .moving-label, #formulario-join .form .moving-label {
       font-size: 0.5rem;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.4;
       letter-spacing: 0.05rem;
       position: absolute;
@@ -681,15 +758,17 @@ nav #under-servicios {
       pointer-events: none; }
       #formulario .form .moving-label.filled, #formulario-join .form .moving-label.filled {
         transform: translate(-0.3rem, 1rem);
-        font-size: 0.4rem; }
+        font-size: 0.4rem;
+        color: #fff; }
     #formulario .form input:focus ~ label, #formulario-join .form input:focus ~ label {
       transform: translate(-0.3rem, 1rem);
-      font-size: 0.4rem; }
+      font-size: 0.4rem;
+      color: #fff; }
   #formulario #btn-enviar, #formulario #send-cv, #formulario-join #btn-enviar, #formulario-join #send-cv {
     width: 100%;
     color: #fff;
-    font-size: 0.4rem;
-    font-weight: 300;
+    font-size: 0.45rem;
+    font-weight: 400;
     line-height: 1;
     letter-spacing: 0.05rem;
     text-transform: capitalize;
@@ -697,13 +776,9 @@ nav #under-servicios {
     border-radius: 0.15rem;
     padding: 0.5rem;
     cursor: pointer;
-    -webkit-appearance: none; }
-    #formulario #btn-enviar#send-cv, #formulario #send-cv#send-cv, #formulario-join #btn-enviar#send-cv, #formulario-join #send-cv#send-cv {
-      background-color: transparent;
-      border: 0.05vw solid #fff; }
-    #formulario #btn-enviar#btn-enviar, #formulario #send-cv#btn-enviar, #formulario-join #btn-enviar#btn-enviar, #formulario-join #send-cv#btn-enviar {
-      background-color: #4DB0E2;
-      border: none; }
+    -webkit-appearance: none;
+    background-color: #4DB0E2;
+    border: 0.07rem solid #fff; }
 
 #join {
   background-color: #4DB0E2; }
@@ -1058,7 +1133,23 @@ footer {
     width: 80%; }
   #formulario-join {
     width: 100%;
-    padding: 0 6vw; } }
+    padding: 0 6vw; }
+  .lng-text {
+    margin-top: 2rem;
+    width: 100%; }
+  #banner-servicios {
+    height: auto;
+    width: 100%;
+    overflow-y: hidden;
+    padding: 4rem 2rem 1rem 2rem;
+    display: block; }
+    #banner-servicios #arrow {
+      display: none; }
+    #banner-servicios img {
+      width: 100%; }
+    #banner-servicios #service-intro {
+      width: 100%;
+      margin-bottom: 1rem; } }
 
 @media screen and (orientation: landscape) and (max-width: 1024px) {
   html {
