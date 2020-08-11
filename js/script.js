@@ -105,6 +105,19 @@ for (var i = 0; i < blue.length; i++) {
   });
 }
 
+var dark = document.getElementsByClassName("dark");
+
+for (var i = 0; i < dark.length; i++) {
+  dark[i].addEventListener("mouseover", function(){
+    this.classList.remove("dark");
+    this.style.transform = "scale(1.3)";
+  });
+  dark[i].addEventListener("mouseout", function(){
+    this.classList.add("dark");
+    this.style.transform = "scale(1)";
+  });
+}
+
 var formInputs = document.getElementsByClassName("form");
 
 for (var i = 0; i < formInputs.length; i++) {

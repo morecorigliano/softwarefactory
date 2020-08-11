@@ -32,7 +32,7 @@ header {
     transform: translateY(-50%);
     left: 1rem; }
     header #logo-text svg {
-      width: 1.8rem; }
+      width: 2.2rem; }
   header #idioma {
     position: absolute;
     top: 50%;
@@ -373,6 +373,39 @@ nav #under-servicios {
     transition: all 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
   #nosotros img:hover {
     -webkit-filter: grayscale(0%); }
+
+#metodologia {
+  padding: 0 3rem 3rem 3rem;
+  text-align: center; }
+  #metodologia h4 {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    color: #4DB0E2; }
+  #metodologia #metodologia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 3rem; }
+    #metodologia #metodologia-grid .method {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+    #metodologia #metodologia-grid p {
+      color: #333333;
+      font-size: 0.5rem;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.05rem; }
+    #metodologia #metodologia-grid svg {
+      height: 2rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      #metodologia #metodologia-grid svg.dark path {
+        fill: #333333; }
 
 #servicios {
   margin-top: 1rem; }
@@ -1053,6 +1086,10 @@ footer {
       height: 50vw; }
     #nosotros img:hover {
       -webkit-filter: grayscale(100%); }
+  #metodologia {
+    margin-top: 35vw; }
+    #metodologia #metodologia-grid {
+      grid-template-columns: 1fr; }
   footer {
     display: flex;
     flex-direction: column;
@@ -1089,7 +1126,7 @@ footer {
       width: 100vw;
       padding: 10vw 6vw; }
   #summary {
-    margin-top: 35vw;
+    margin-top: 20vw;
     margin-bottom: 18vw; }
     #summary #servicios-icons {
       grid-template-columns: 1fr;
