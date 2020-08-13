@@ -717,30 +717,56 @@ nav #under-servicios {
     z-index: -100; }
 
 #call-contacto {
-  padding-top: 3rem;
+  padding: 4rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  #call-contacto p {
+  #call-contacto .are {
     font-size: 0.6rem;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0.05rem;
     color: #fff;
-    margin-bottom: 1rem; }
-  #call-contacto a {
+    margin-bottom: .6rem; }
+  #call-contacto h4 {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 2rem; }
   #call-contacto #arrow svg {
-    margin-top: 2vw;
+    margin-top: .6rem;
     height: 0.8rem;
     transform: rotate(90deg); }
+  #call-contacto #typewriter #staticText {
+    font-size: 0.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    color: white;
+    text-transform: uppercase;
+    display: inline; }
+  #call-contacto #typewriter #line {
+    font-size: 0.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    color: white;
+    text-transform: uppercase;
+    display: inline; }
+  #call-contacto #mail {
+    margin-top: 2rem;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    color: white;
+    padding: .6rem;
+    border: 0.04rem solid white; }
 
 #contacto-formularios {
   display: flex;
@@ -749,12 +775,12 @@ nav #under-servicios {
   align-items: center;
   padding: 1rem 0 3rem 0; }
 
-#formulario, #formulario-join {
+#formulario-join {
   width: 50%; }
-  #formulario .form, #formulario-join .form {
+  #formulario-join .form {
     position: relative;
     margin-bottom: 1rem; }
-    #formulario .form input, #formulario .form textarea, #formulario-join .form input, #formulario-join .form textarea {
+    #formulario-join .form input, #formulario-join .form textarea {
       border: none;
       font-size: 0.5rem;
       font-weight: 400;
@@ -767,17 +793,17 @@ nav #under-servicios {
       background-color: #ecebeb;
       -webkit-appearance: none;
       border-radius: 0.15rem; }
-    #formulario .form textarea, #formulario-join .form textarea {
+    #formulario-join .form textarea {
       height: 5.5rem;
       resize: none;
       margin-top: 0.4rem; }
-    #formulario .form .label-text, #formulario-join .form .label-text {
+    #formulario-join .form .label-text {
       font-size: 0.5rem;
       font-weight: 400;
       line-height: 1;
       letter-spacing: 0.05rem;
       color: #fff; }
-    #formulario .form .moving-label, #formulario-join .form .moving-label {
+    #formulario-join .form .moving-label {
       font-size: 0.5rem;
       font-weight: 400;
       line-height: 1.4;
@@ -789,15 +815,15 @@ nav #under-servicios {
       transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
       color: #000000;
       pointer-events: none; }
-      #formulario .form .moving-label.filled, #formulario-join .form .moving-label.filled {
+      #formulario-join .form .moving-label.filled {
         transform: translate(-0.3rem, 1rem);
         font-size: 0.4rem;
         color: #fff; }
-    #formulario .form input:focus ~ label, #formulario-join .form input:focus ~ label {
+    #formulario-join .form input:focus ~ label {
       transform: translate(-0.3rem, 1rem);
       font-size: 0.4rem;
       color: #fff; }
-  #formulario #btn-enviar, #formulario #send-cv, #formulario-join #btn-enviar, #formulario-join #send-cv {
+  #formulario-join #btn-enviar, #formulario-join #send-cv {
     width: 100%;
     color: #fff;
     font-size: 0.45rem;
@@ -1099,32 +1125,6 @@ footer {
       margin-top: 0.8rem; }
   #banner-section p {
     width: 80%; }
-  #contacto-formularios {
-    display: flex;
-    flex-direction: column;
-    padding: 0; }
-    #contacto-formularios #carga-cv {
-      padding: 10vw 6vw;
-      order: 2;
-      width: 100vw;
-      height: 100%;
-      margin: 0; }
-      #contacto-formularios #carga-cv p {
-        margin-bottom: 5vw; }
-      #contacto-formularios #carga-cv #cargar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
-        #contacto-formularios #carga-cv #cargar input {
-          margin-top: 6vw;
-          width: 50%; }
-      #contacto-formularios #carga-cv #enviar-cv {
-        margin-top: 10vw; }
-    #contacto-formularios #formulario {
-      order: 1;
-      width: 100vw;
-      padding: 10vw 6vw; }
   #summary {
     margin-top: 20vw;
     margin-bottom: 18vw; }
@@ -1171,6 +1171,8 @@ footer {
   #formulario-join {
     width: 100%;
     padding: 0 6vw; }
+  #call-contacto {
+    padding: 2rem; }
   .lng-text {
     margin-top: 2rem;
     width: 100%; }
