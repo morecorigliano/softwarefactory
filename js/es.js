@@ -1,3 +1,4 @@
+
 function write (obj, sentence, i, cb) {
   if (i != sentence.length) {
     setTimeout(function () {

@@ -704,17 +704,8 @@ nav #under-servicios {
   to {
     transform: rotate(360deg); } }
 
-#contacto {
+.contacto {
   position: relative; }
-  #contacto #particle-js {
-    background-color: #4DB0E2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -100; }
 
 #call-contacto {
   padding: 4rem;

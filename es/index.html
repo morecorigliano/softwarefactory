@@ -2588,7 +2588,6 @@
     </div>
 
     <div id="contacto">
-      <div id="particle-js"></div>
         <div id="call-contacto">
         <h4>Contacto</h4>
         <p class="are">¿Estás listo para</p>
@@ -2647,6 +2646,22 @@
 <script>
   AOS.init({
   duration: 800,
+})
+</script>
+<script src="../js/three.r119.min.js"></script>
+<script src="../js/vanta.waves.min.js"></script>
+<script>
+VANTA.WAVES({
+  el: "#contacto",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x35872,
+  shininess: 27.00
 })
 </script>
 <script src="../js/script.js"></script>
