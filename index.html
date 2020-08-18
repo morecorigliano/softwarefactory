@@ -6,6 +6,7 @@
     <title>SkySoft</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/icon.png">
     <link rel="alternate" hreflang="x-default"
@@ -2575,9 +2576,13 @@
         <div id="call-contacto">
         <h4>Contact us</h4>
         <p class="are">Are you ready to</p>
-        <div id="typewriter">
-        <span id = "staticText"><span id="typeline"></span></span>
-        <div id="line">?</div>
+        <div class="type-wrap">
+          <div id="typed-strings" style="display: none;">
+            <p>launch?</p>
+            <p>bring your project to life?</p>
+            <p>make a top notch product?</p>
+          </div>
+          <span id="typed" style="color: white"></span>
         </div>
         <a href="#formulario" id="arrow">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.569 67.984">
@@ -2622,8 +2627,8 @@
           </a>
         </div>
     </footer>
-    <script src="../js/particles.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -2644,10 +2649,20 @@ VANTA.WAVES({
   scale: 1.00,
   scaleMobile: 1.00,
   color: 0x35872,
-  shininess: 27.00
+  shininess: 35.00
 })
 </script>
+<script src="js/typed.min.js"></script>
+<script>
+var typed = new Typed("#typed", {
+    stringsElement: '#typed-strings',
+    typeSpeed: 20,
+    backSpeed: 10,
+    backDelay: 1000,
+    startDelay: 0,
+    loop: true,
+  });
+</script>
 <script src="js/script.js"></script>
-<script src="js/en.js"></script>
 <script src="js/index.js"></script>
 </html>
