@@ -23,20 +23,20 @@ header {
   background-color: transparent;
   position: fixed;
   width: 100%;
-  padding: 0.4rem 0;
+  padding: 0.6rem 0;
   z-index: 1500000;
   transition: background 0.3s ease-out; }
   header #logo-text {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     left: 1rem; }
     header #logo-text svg {
       width: 2.2rem; }
   header #idioma {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     right: 1rem;
     display: flex;
     flex-direction: row;
@@ -63,8 +63,8 @@ header {
   width: 500vw;
   background-color: #fff;
   z-index: -15000;
-  transform-origin: top right;
-  transform: scale(0);
+  -webkit-transform-origin: top right;
+  -webkit-transform: scale(0);
   transition: transform 0.3s ease-out;
   border-bottom-left-radius: 50%; }
 
@@ -79,12 +79,17 @@ nav h1 {
   opacity: 0; }
 
 #logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
+  -webkit-transform-origin: center center; }
   #logo svg {
-    height: 1.1rem; }
+    height: .7rem; }
+    #logo svg .letters {
+      transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
+      -webkit-transform-origin: center center; }
+      #logo svg .letters path {
+        fill: #5e5e5e; }
+    #logo svg #icono path {
+      fill: #4DB0E2; }
 
 #logo-mobile {
   z-index: 45648888888;
@@ -96,11 +101,7 @@ nav h1 {
     letter-spacing: 0.05rem;
     color: white; }
   #logo-mobile svg {
-    height: 1.3rem; }
-  #logo-mobile svg:last-of-type {
-    width: 2.5rem;
-    margin-left: .5rem;
-    color: rgba(68, 68, 68, 0.5); }
+    height: .9rem; }
 
 #nav-toggle {
   display: none; }
@@ -117,7 +118,7 @@ nav h1 {
     #nav-toggle span:last-of-type {
       width: 4vw;
       margin-bottom: 0;
-      transform-origin: bottom right; }
+      -webkit-transform-origin: bottom right; }
 
 nav {
   width: 100vw;
@@ -176,13 +177,13 @@ nav #nav-list .nav-li {
   nav #nav-list .nav-li:hover .underline {
     opacity: 1; }
   nav #nav-list .nav-li:hover .underline .line {
-    animation: slideIn .2s ease-out forwards; }
+    -webkit-animation: slideIn .2s ease-out forwards; }
   nav #nav-list .nav-li:hover #under-servicios {
     pointer-events: auto;
-    animation: showUnder .2s ease-out forwards; }
+    -webkit-animation: showUnder .2s ease-out forwards; }
   nav #nav-list .nav-li:hover #under-servicios li {
     pointer-events: auto;
-    animation: slideRight .2s ease-out forwards; }
+    -webkit-animation: slideRight .2s ease-out forwards; }
 
 @keyframes showUnder {
   0% {
@@ -253,6 +254,14 @@ nav #under-servicios {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
+  #banner #scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -50000; }
   #banner #particles-js {
     background-color: #fff;
     position: absolute;
@@ -260,58 +269,37 @@ nav #under-servicios {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; }
-  #banner #slider {
-    position: relative; }
-  #banner h3 {
+    overflow: hidden;
+    z-index: -50000; }
+  #banner .are {
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: 0.05rem;
-    color: #333333;
-    margin-left: 8vw;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    margin-bottom: 1rem;
-    position: relative;
-    top: 0;
-    left: 0; }
-    #banner h3 span {
-      font-weight: 700;
-      color: #4DB0E2; }
-    #banner h3 .fade {
-      animation-name: fade;
-      animation-duration: 1.5s; }
-
-@keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
-  #banner .btn {
-    width: auto;
-    display: block;
-    border: 0.1vw solid #fff;
-    margin-left: 8vw;
-    color: #fff;
-    padding: 0.5rem;
-    text-align: center;
-    font-size: 0.5rem;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    animation: moveInLeft 1s ease-out forwards; }
+    color: #333333;
+    margin-bottom: .4rem;
+    margin-left: 8vw;
+    margin-top: -1.7rem; }
+  #banner .type-wrap {
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 8vw; }
+    #banner .type-wrap #typed {
+      margin-top: -1.7rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: 0.05rem;
+      color: #4DB0E2; }
   #banner #arrow {
     position: absolute;
     bottom: 10vh;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation-name: moveUpDown;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out; }
+    -webkit-animation-name: moveUpDown;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out; }
     #banner #arrow svg {
       height: 1.2rem;
       transform: rotate(90deg); }
@@ -322,10 +310,10 @@ nav #under-servicios {
   background-color: #4DB0E2;
   position: relative;
   top: -10vh;
-  padding: 10vw 6vw 15vw 6vw;
-  animation-name: moveUp;
-  animation-duration: .5s;
-  animation-timing-function: ease-in-out;
+  padding: 10vw 6vw 14vw 6vw;
+  -webkit-animation-name: moveUp;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: ease-in-out;
   -webkit-clip-path: polygon(0 90%, 0 0, 150% 0, 150% 90%, 58% 90%, 50% 100%, 42% 90%);
   overflow: visible;
   display: flex;
@@ -619,7 +607,7 @@ nav #under-servicios {
       fill: rgba(255, 255, 255, 0.8); }
     #cm-icons svg line {
       stroke-dasharray: 50;
-      animation: dash 5s linear infinite; }
+      -webkit-animation: dash 5s linear infinite; }
 
 @keyframes dash {
   to {
@@ -643,10 +631,10 @@ nav #under-servicios {
     #ux-icons svg #content line, #ux-icons svg #content rect {
       stroke-dasharray: 800;
       stroke-dashoffset: 800;
-      animation: draw 2s linear infinite; }
+      -webkit-animation: draw 2s linear infinite; }
     #ux-icons svg #popup line {
       stroke-dasharray: 50;
-      animation: dash 5s linear infinite; }
+      -webkit-animation: dash 5s linear infinite; }
 
 #seo-icons {
   display: flex;
@@ -667,10 +655,10 @@ nav #under-servicios {
     #seo-icons svg #arrow polyline {
       stroke-dasharray: 800;
       stroke-dashoffset: 800;
-      animation: draw 1s linear infinite; }
+      -webkit-animation: draw 1s linear infinite; }
     #seo-icons svg #lupa circle, #seo-icons svg #lupa line {
       stroke-dasharray: 5;
-      animation: dash 5s linear infinite; }
+      -webkit-animation: dash 5s linear infinite; }
 
 #test-icons {
   display: flex;
@@ -689,14 +677,14 @@ nav #under-servicios {
       stroke: rgba(77, 176, 226, 0.8); }
       #test-icons svg #config path {
         transform-origin: center center;
-        animation: rotate 2s linear infinite; }
+        -webkit-animation: rotate 2s linear infinite; }
     #test-icons svg #text line, #test-icons svg #text path {
       stroke-dasharray: 800;
       stroke-dashoffset: 800;
-      animation: draw 2s linear infinite; }
+      -webkit-animation: draw 2s linear infinite; }
     #test-icons svg #lupa circle {
       stroke-dasharray: 100;
-      animation: dash 5s linear infinite; }
+      -webkit-animation: dash 5s linear infinite; }
 
 @keyframes rotate {
   from {
@@ -713,15 +701,7 @@ nav #under-servicios {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: 'Quicksand', sans-serif; }
-  #call-contacto .are {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 0.05rem;
-    color: #fff;
-    margin-bottom: .6rem; }
+  justify-content: center; }
   #call-contacto h4 {
     font-family: 'Lato', sans-serif;
     color: #fff;
@@ -732,19 +712,10 @@ nav #under-servicios {
     text-transform: uppercase;
     margin-bottom: 2rem; }
   #call-contacto #arrow svg {
-    margin-top: 1.4rem;
     height: 0.8rem;
     transform: rotate(90deg); }
-  #call-contacto #typewrap #typed span {
-    font-size: 0.6rem;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.05rem;
-    text-align: center; }
-  #call-contacto .typed-cursor {
-    color: white !important; }
   #call-contacto #mail {
-    margin-top: 1.4rem;
+    margin-top: 2rem;
     font-size: 0.6rem;
     font-weight: 400;
     line-height: 1.2;
@@ -752,6 +723,33 @@ nav #under-servicios {
     color: white;
     padding: .6rem;
     border: 0.05rem solid white; }
+  #call-contacto #slider {
+    position: relative; }
+  #call-contacto p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    color: #fff;
+    -webkit-animation-name: moveInLeft;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: ease-out;
+    margin-bottom: 1rem;
+    position: relative;
+    top: 0;
+    left: 0; }
+    #call-contacto p span {
+      font-weight: 700; }
+    #call-contacto p .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1s; }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
 
 #contacto-formularios {
   display: flex;
@@ -874,7 +872,12 @@ nav #under-servicios {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  position: relative; }
+  #form-wrapper #anchor {
+    position: absolute;
+    top: -2.3rem;
+    left: 0; }
   #form-wrapper #formulario-join select {
     margin-top: .4rem;
     width: 100%;
@@ -987,10 +990,10 @@ footer {
     bottom: 5vh;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation-name: moveUpDown;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out; }
+    -webkit-animation-name: moveUpDown;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out; }
     #banner-servicios #arrow svg {
       height: 1.2rem;
       transform: rotate(90deg); }
@@ -1071,8 +1074,19 @@ footer {
     overflow-x: hidden; }
     #banner #arrow {
       bottom: 2vh; }
-    #banner #slider {
-      width: 80%; }
+    #banner .are {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.05rem;
+      padding-right: 8vw; }
+    #banner .type-wrap {
+      padding-right: 8vw; }
+      #banner .type-wrap #typed {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2;
+        letter-spacing: 0.05rem; }
   #nosotros {
     width: 100%;
     margin: 0;
@@ -1198,7 +1212,7 @@ footer {
       nav #nav-list .nav-li:last-of-type {
         margin-right: 0; }
   #nav-toggle {
-    transform: scale(0.6); }
+    -webkit-transform: scale(0.6); }
   #banner {
     height: 130vh; }
     #banner h3 {

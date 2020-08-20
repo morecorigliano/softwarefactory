@@ -174,3 +174,41 @@ for (var i = 0; i < blue.length; i++) {
   });
 }
 
+
+var letter = document.getElementsByClassName("letters");
+var logo = document.getElementById("logo-img");
+var header = document.querySelector("header");
+
+var mediaQueriesMax = window.matchMedia("(min-width: 1024px)");
+myFunctionMax(mediaQueriesMax);
+mediaQueriesMax.addListener(myFunction);
+
+function myFunctionMax(mediaQueriesMax){ 
+  
+  if(mediaQueriesMax.matches){
+
+    window.addEventListener('scroll', function(){
+      "use strict";
+      if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
+        for (var b = 0; b < letter.length; b++) {
+          letter[b].style.transform= "scale(0)";
+        }
+        setTimeout( function() {
+          logo.setAttribute("viewBox","1500 0 900 824.3");
+        }, 110);
+        setTimeout( function() {
+        logo.style.transform = "scale(1.8)";
+        }, 100);
+      } else{
+        for (var b = 0; b < letter.length; b++) {
+          letter[b].style.transform= "scale(1)";
+        }
+        setTimeout( function() {
+        logo.setAttribute("viewBox","0 0 2693.1 824.3");
+        logo.style.transform = "scale(1)";
+      }, 100);
+      }
+    });
+  }
+
+}
