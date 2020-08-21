@@ -8,6 +8,8 @@ var lineTwo = document.getElementById("line-two");
 var lineThree = document.getElementById("line-three");
 var inicio = document.getElementById("logo");
 
+////// abrir/cerrar boton hamburguesa mobile ////////
+
 var navToggleClicks = 1;
 
 var mediaQueries = window.matchMedia("(max-width: 1024px)");
@@ -65,6 +67,8 @@ function closeNav(){
     lineThree.style.width = "4vw";
 }
 
+////// suavizar el scroll en anchors de href ////////
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -74,6 +78,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+
+////// animación de hover en iconos de lenguajes ////////
 
 var white = document.getElementsByClassName("white");
 
@@ -118,6 +124,8 @@ for (var i = 0; i < dark.length; i++) {
   });
 }
 
+////// animación de titulo de inputs en el form ////////
+
 var formInputs = document.getElementsByClassName("form");
 
 for (var i = 0; i < formInputs.length; i++) {
@@ -129,6 +137,8 @@ for (var i = 0; i < formInputs.length; i++) {
         }
     });
 }
+
+////// mostrar texto de cada lenguaje al hacer click ////////
 
 var lngsFront = document.getElementById("lngs-front");
 var lngsBack = document.getElementById("lngs-back");
@@ -174,6 +184,7 @@ for (var i = 0; i < blue.length; i++) {
   });
 }
 
+////// acortar logo en scroll ////////
 
 var letter = document.getElementsByClassName("letters");
 var logo = document.getElementById("logo-img");

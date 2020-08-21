@@ -25,7 +25,7 @@ header {
   width: 100%;
   padding: 0.6rem 0;
   z-index: 1500000;
-  transition: background 0.3s ease-out; }
+  -webkit-transition: background 0.3s ease-out; }
   header #logo-text {
     position: absolute;
     top: 50%;
@@ -65,12 +65,12 @@ header {
   z-index: -15000;
   -webkit-transform-origin: top right;
   -webkit-transform: scale(0);
-  transition: transform 0.3s ease-out;
+  -webkit-transition: transform 0.3s ease-out;
   border-bottom-left-radius: 50%; }
 
 .scroll {
   background-color: #fff;
-  transition: background 1s ease-out;
+  -webkit-transition: background 1s ease-out;
   box-shadow: 0rem 0rem 1vh rgba(0, 0, 0, 0.2);
   border-bottom: 0.5px solid rgba(117, 117, 117, 0.2); }
 
@@ -79,12 +79,12 @@ nav h1 {
   opacity: 0; }
 
 #logo {
-  transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
+  -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
   -webkit-transform-origin: center center; }
   #logo svg {
     height: .7rem; }
     #logo svg .letters {
-      transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
+      -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
       -webkit-transform-origin: center center; }
       #logo svg .letters path {
         fill: #5e5e5e; }
@@ -112,7 +112,7 @@ nav h1 {
     background-color: #4DB0E2;
     margin-bottom: 1.2vw;
     transform-origin: top right;
-    transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+    -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
     #nav-toggle span:nth-of-type(2) {
       width: 6vw; }
     #nav-toggle span:last-of-type {
@@ -185,13 +185,13 @@ nav #nav-list .nav-li {
     pointer-events: auto;
     -webkit-animation: slideRight .2s ease-out forwards; }
 
-@keyframes showUnder {
+@-webkit-keyframes showUnder {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
 
-@keyframes slideRight {
+@-webkit-keyframes slideRight {
   0% {
     opacity: 0;
     transform: translateX(-0.5rem); }
@@ -199,7 +199,7 @@ nav #nav-list .nav-li {
     opacity: 1;
     transform: translateX(0); } }
 
-@keyframes slideIn {
+@-webkit-keyframes slideIn {
   0% {
     width: 10%; }
   50% {
@@ -223,8 +223,8 @@ nav #under-servicios {
     width: 220%; }
   nav #under-servicios.scroll-sv {
     background-color: #fff;
-    transition-delay: 2s;
-    transition: background 1.2s ease-out; }
+    -webkit-transition-delay: 2s;
+    -webkit-transition: background 1.2s ease-out; }
   nav #under-servicios.scroll-sv-join {
     background-color: #fff; }
   nav #under-servicios li {
@@ -358,7 +358,7 @@ nav #under-servicios {
     left: 25%;
     object-fit: cover;
     -webkit-filter: grayscale(100%);
-    transition: all 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+    -webkit-transition: all 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
   #nosotros img:hover {
     -webkit-filter: grayscale(0%); }
 
@@ -391,7 +391,7 @@ nav #under-servicios {
     #metodologia #metodologia-grid svg {
       height: 2rem;
       margin-bottom: 1rem;
-      transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
       #metodologia #metodologia-grid svg.dark path {
         fill: #333333; }
 
@@ -425,7 +425,7 @@ nav #under-servicios {
       align-items: center; }
       #summary #servicios-icons a svg {
         height: 2rem;
-        transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+        -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
       #summary #servicios-icons a .line {
         display: block;
         height: 1.5rem;
@@ -433,7 +433,7 @@ nav #under-servicios {
         background-color: #4DB0E2;
         margin: 1vw 0;
         transform-origin: bottom center;
-        transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+        -webkit-transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
       #summary #servicios-icons a p {
         width: 55%;
         color: #333333;
@@ -524,11 +524,11 @@ nav #under-servicios {
     .lenguajes .lng.blue svg path {
       fill: rgba(77, 176, 226, 0.8); }
     .lenguajes .lng p {
-      transition: font 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      -webkit-transition: font 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
     .lenguajes .lng svg {
       height: 1.4rem;
       margin-bottom: 0.5rem;
-      transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      -webkit-transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
     .lenguajes .lng .show {
       margin-top: 0.3rem;
       color: #4DB0E2;
@@ -571,7 +571,7 @@ nav #under-servicios {
     .lng-text .lng-back svg {
       height: 1.4rem;
       margin-bottom: 0.5rem;
-      transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      -webkit-transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
     .lng-text .lng-back .show {
       transform: rotate(180deg);
       margin-top: 0.3rem;
@@ -609,11 +609,11 @@ nav #under-servicios {
       stroke-dasharray: 50;
       -webkit-animation: dash 5s linear infinite; }
 
-@keyframes dash {
+@-webkit-keyframes dash {
   to {
     stroke-dashoffset: 800; } }
 
-@keyframes draw {
+@-webkit-keyframes draw {
   to {
     stroke-dashoffset: 0; } }
 
@@ -686,14 +686,17 @@ nav #under-servicios {
       stroke-dasharray: 100;
       -webkit-animation: dash 5s linear infinite; }
 
-@keyframes rotate {
+@-webkit-keyframes rotate {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
 
 #contacto {
-  position: relative; }
+  position: relative;
+  background-color: #4DB0E2;
+  height: auto;
+  overflow-y: hidden; }
 
 #call-contacto {
   padding: 4rem;
@@ -745,7 +748,7 @@ nav #under-servicios {
       -webkit-animation-name: fade;
       -webkit-animation-duration: 1s; }
 
-@keyframes fade {
+@-webkit-keyframes fade {
   from {
     opacity: .4; }
   to {
@@ -795,7 +798,7 @@ nav #under-servicios {
       bottom: 0.3rem;
       left: 0.3rem;
       display: block;
-      transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
+      -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03);
       color: #000000;
       pointer-events: none; }
       #formulario-join .form .moving-label.filled {
@@ -906,7 +909,8 @@ footer {
   justify-content: space-between;
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: 52560000; }
   footer p {
     display: inline-block;
     font-size: 0.4rem;
@@ -953,7 +957,7 @@ footer {
       display: inline-block;
       margin-left: 0.5rem; }
 
-@keyframes moveInLeft {
+@-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
     transform: translateX(-20%); }
@@ -961,7 +965,7 @@ footer {
     opacity: 1;
     transform: translate(0); } }
 
-@keyframes moveUpDown {
+@-webkit-keyframes moveUpDown {
   0% {
     transform: translateY(-2vh); }
   50% {
@@ -969,7 +973,7 @@ footer {
   100% {
     transform: translateY(-2vh); } }
 
-@keyframes moveUp {
+@-webkit-keyframes moveUp {
   0% {
     transform: translateY(10vh); }
   100% {
@@ -998,7 +1002,7 @@ footer {
       height: 1.2rem;
       transform: rotate(90deg); }
   #banner-servicios img {
-    width: 40%; }
+    width: 45%; }
   #banner-servicios #service-intro {
     width: 40%; }
     #banner-servicios #service-intro h3 {
@@ -1049,7 +1053,7 @@ footer {
       left: 0;
       transform: translate(150%, -50%);
       display: block;
-      transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
       nav #nav-list .nav-li {
         display: list-item;
         width: 100vw;
@@ -1161,6 +1165,17 @@ footer {
       width: 100%; }
     .article .article-text {
       width: 100%; }
+      .article .article-text a {
+        color: #5e5e5e;
+        width: 100%;
+        display: block;
+        padding: .4rem 0;
+        text-align: center;
+        background-color: white;
+        margin-top: 1rem; }
+        .article .article-text a.color {
+          color: white;
+          background-color: #4DB0E2; }
     .article .lenguajes {
       width: 100%;
       margin-top: 2rem;
