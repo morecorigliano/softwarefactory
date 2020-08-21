@@ -217,7 +217,9 @@ nav #under-servicios {
   top: 100%;
   left: -45%;
   width: 190%;
-  padding: .5rem; }
+  padding: .5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: .35rem; }
   nav #under-servicios.eng {
     left: -55%;
     width: 220%; }
@@ -357,7 +359,6 @@ nav #under-servicios {
     position: relative;
     left: 25%;
     object-fit: cover;
-    -webkit-filter: grayscale(100%);
     -webkit-transition: all 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
   #nosotros img:hover {
     -webkit-filter: grayscale(0%); }
@@ -438,7 +439,7 @@ nav #under-servicios {
         width: 55%;
         color: #333333;
         font-size: 0.5rem;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.2;
         letter-spacing: 0.05rem; }
     #summary #servicios-icons .icon:hover .line {
@@ -1108,11 +1109,7 @@ footer {
       top: 15vw;
       display: block; }
     #nosotros #border {
-      position: absolute;
-      top: 17vw;
-      left: 3vw;
-      width: 75vw;
-      height: 50vw; }
+      display: none; }
     #nosotros img:hover {
       -webkit-filter: grayscale(100%); }
   #metodologia {
