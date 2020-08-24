@@ -212,14 +212,15 @@ nav #under-servicios {
   opacity: 0;
   transform-origin: top center;
   pointer-events: none;
-  background-color: transparent;
+  background-color: #fff;
   position: absolute;
   top: 100%;
   left: -45%;
   width: 190%;
   padding: .5rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-  border-radius: .35rem; }
+  border-bottom-right-radius: .35rem;
+  border-bottom-left-radius: .35rem; }
   nav #under-servicios.eng {
     left: -55%;
     width: 220%; }
@@ -511,6 +512,8 @@ nav #under-servicios {
   top: 0;
   left: 0;
   cursor: pointer; }
+  .lenguajes#join-lng {
+    cursor: auto; }
   .lenguajes .lng {
     font-size: 0.4rem;
     font-weight: 300;

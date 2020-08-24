@@ -12,6 +12,10 @@
     <link rel="alternate" hreflang="x-default"
     href="../index.html">
     <link rel="alternate" hreflang="en" href="../index.html">
+    <!-- animacion pelota banner -->
+    <link rel="stylesheet" type="text/css" href="../css/demo3.css"/>
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
 </head>
 <body id="body-home">
 
@@ -51,7 +55,7 @@
             </li>
             <li id="servicios-li" class="nav-li">
               <a href="#servicios">Servicios</a>
-              <ul id="under-servicios" class="eng">
+              <ul id="under-servicios">
                 <li><a href="servicios/frontend.html">Desarollo Frontend</a></li>
                 <li><a href="servicios/backend.html">Desarollo Backend</a></li>
                 <li><a href="servicios/cm.html">Community Management</a></li>
@@ -185,7 +189,7 @@
     <main>
 
     <div id="banner">
-       <div id="particles-js"></div>
+      <canvas class="scene scene--full" id="scene"></canvas>
        <p class="are">¿Estás listo para</p>
        <div class="type-wrap">
          <div id="typed-strings" style="display: none;">
@@ -2684,9 +2688,7 @@
         </div>
 
     </footer>
-    <!-- particulas header -->
-    <script src="../js/particles.js"></script>
-    <script src="../js/app.js"></script>
+
 </body>
 <!-- efecto scroll -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -2724,6 +2726,10 @@ var typed = new Typed("#typed", {
     loop: true,
   });
 </script>
+<!-- animacion pelota banner -->
+<script src="../js/three.min.js"></script>
+<script src="../js/perlin.js"></script>
+<script src="../js/demo3.js"></script>
 <!-- js personalizado -->
 <script src="../js/script.js"></script>
 <script src="../js/index.js"></script>
