@@ -224,10 +224,6 @@ nav #under-servicios {
   nav #under-servicios.eng {
     left: -55%;
     width: 220%; }
-  nav #under-servicios.scroll-sv {
-    background-color: #fff;
-    -webkit-transition-delay: 2s;
-    -webkit-transition: background 1.2s ease-out; }
   nav #under-servicios.scroll-sv-join {
     background-color: #fff; }
   nav #under-servicios li {

@@ -7,10 +7,8 @@ window.onscroll = function() {
   "use strict";
   if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
     nav.classList.add("scroll");
-    underServicios.classList.add("scroll-sv");
   } else{
     nav.classList.remove("scroll");
-    underServicios.classList.remove("scroll-sv");
   }
 };
 
