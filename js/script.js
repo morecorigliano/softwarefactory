@@ -190,9 +190,9 @@ var letter = document.getElementsByClassName("letters");
 var logo = document.getElementById("logo-img");
 var header = document.querySelector("header");
 
-var mediaQueriesMax = window.matchMedia("(min-width: 1024px)");
+var mediaQueriesMax = window.matchMedia("(min-width: 1025px)");
 myFunctionMax(mediaQueriesMax);
-mediaQueriesMax.addListener(myFunction);
+mediaQueriesMax.addListener(myFunctionMax);
 
 function myFunctionMax(mediaQueriesMax){ 
   
