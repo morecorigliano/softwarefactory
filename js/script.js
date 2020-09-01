@@ -10,17 +10,6 @@ var inicio = document.getElementById("logo");
 var nav = document.getElementById("header");
 var underServicios = document.getElementById("under-servicios");
 
-////// agregar background-color al nav al scrollear ////////
-
-window.onscroll = function() {
-  "use strict";
-  if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
-    nav.classList.add("scroll");
-  } else{
-    nav.classList.remove("scroll");
-  }
-};
-
 ////// abrir/cerrar boton hamburguesa mobile ////////
 
 var navToggleClicks = 1;
@@ -32,15 +21,11 @@ mediaQueries.addListener(myFunction);
 function myFunction(mediaQueries){ 
   
   if(mediaQueries.matches){
-
     navToggle.addEventListener("click", OpenClose);
-
     navToggle.addEventListener("click", setLogo);
-
     for (var i = 0; i < navListItem.length; i++) {
       navListItem[i].addEventListener('click', OpenClose);
     }
-
   }
 
 }

@@ -14,3 +14,16 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 3000);
 }
+
+////// agregar background-color al nav al scrollear ////////
+
+var nav = document.getElementById("header");
+
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
+    nav.classList.add("scroll");
+  } else{
+    nav.classList.remove("scroll");
+  }
+};
