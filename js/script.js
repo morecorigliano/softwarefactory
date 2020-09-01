@@ -7,6 +7,19 @@ var lineOne = document.getElementById("line-one");
 var lineTwo = document.getElementById("line-two");
 var lineThree = document.getElementById("line-three");
 var inicio = document.getElementById("logo");
+var nav = document.getElementById("header");
+var underServicios = document.getElementById("under-servicios");
+
+////// agregar background-color al nav al scrollear ////////
+
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
+    nav.classList.add("scroll");
+  } else{
+    nav.classList.remove("scroll");
+  }
+};
 
 ////// abrir/cerrar boton hamburguesa mobile ////////
 
@@ -223,3 +236,4 @@ function myFunctionMax(mediaQueriesMax){
   }
 
 }
+

@@ -1,17 +1,3 @@
-var nav = document.getElementById("header");
-var underServicios = document.getElementById("under-servicios");
-
-////// agregar background-color al nav al scrollear ////////
-
-window.onscroll = function() {
-  "use strict";
-  if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
-    nav.classList.add("scroll");
-  } else{
-    nav.classList.remove("scroll");
-  }
-};
-
 ////// efecto slider en textos de contacto ////////
 
 var slideIndex = 0;
