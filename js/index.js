@@ -27,3 +27,19 @@ window.onscroll = function() {
     nav.classList.remove("scroll");
   }
 };
+
+//////// slider clientes ////////
+
+var carrousel = document.getElementById("img-wrp");
+var back = document.getElementById("back");
+var next = document.getElementById("next");
+
+
+
+next.addEventListener("click", function(){
+    carrousel.style.transform = "translateX(-7.8rem)";
+});
+
+back.addEventListener("click", function(){
+  carrousel.style.transform = "translateX(0)";
+});

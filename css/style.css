@@ -233,15 +233,12 @@ nav #under-servicios {
   background-color: #fff;
   position: absolute;
   top: 100%;
-  left: -45%;
-  width: 190%;
+  left: -55%;
+  width: 220%;
   padding: .5rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   border-bottom-right-radius: .35rem;
   border-bottom-left-radius: .35rem; }
-  nav #under-servicios.eng {
-    left: -55%;
-    width: 220%; }
   nav #under-servicios.scroll-sv-join {
     background-color: #fff; }
   nav #under-servicios li {
@@ -379,7 +376,7 @@ nav #under-servicios {
     -webkit-filter: grayscale(0%); }
 
 #metodologia {
-  padding: 0 3rem 3rem 3rem;
+  padding: 3rem;
   text-align: center; }
   #metodologia h4 {
     margin-bottom: 3rem;
@@ -399,7 +396,6 @@ nav #under-servicios {
       align-items: center;
       justify-content: center; }
     #metodologia #metodologia-grid p {
-      color: #333333;
       font-size: 0.5rem;
       font-weight: 400;
       line-height: 1.2;
@@ -415,8 +411,9 @@ nav #under-servicios {
   margin-top: 1rem; }
 
 #summary {
-  width: 85vw;
-  margin: 0 7.5vw 10vw 7.5vw;
+  width: 100%;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
   text-align: center;
   color: white; }
   #summary h4 {
@@ -426,91 +423,109 @@ nav #under-servicios {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    color: #5e5e5e; }
+    color: #5e5e5e;
+    width: 100%;
+    text-align: center; }
   #summary #servicios-icons {
     display: grid;
-    grid-template-columns: 16.5% 16.5% 16.5% 16.5% 16.5% 16.5%; }
+    grid-template-columns: 22% 22% 22% 22%;
+    column-gap: 1rem;
+    row-gap: 3rem; }
     #summary #servicios-icons .icon svg path {
-      fill: #4DB0E2; }
+      fill: #333333; }
     #summary #servicios-icons .icon svg circle {
-      fill: #4DB0E2; }
+      fill: #333333; }
     #summary #servicios-icons a {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center; }
       #summary #servicios-icons a svg {
-        height: 2rem;
+        height: 1.7rem;
         -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
       #summary #servicios-icons a .line {
         display: block;
-        height: 1.5rem;
-        width: .06rem;
+        height: 1.2rem;
+        width: .08rem;
+        border-radius: 5rem;
         background-color: #4DB0E2;
-        margin: 1vw 0;
+        margin: .4rem 0;
         transform-origin: bottom center;
         -webkit-transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-      #summary #servicios-icons a p {
-        width: 55%;
+      #summary #servicios-icons a .title {
+        width: 100%;
         color: #333333;
-        font-size: 0.5rem;
-        font-weight: 500;
+        font-size: 0.37rem;
+        font-weight: 600;
         line-height: 1.2;
-        letter-spacing: 0.05rem; }
+        letter-spacing: 0.05rem;
+        text-transform: uppercase; }
+      #summary #servicios-icons a .text {
+        width: 85%;
+        font-size: 0.4rem;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: 0.05rem;
+        color: #333333;
+        margin-top: .5rem; }
+      #summary #servicios-icons a .more {
+        margin-top: .5rem;
+        width: 1rem;
+        height: 1rem;
+        color: #fff;
+        text-align: center;
+        font-size: 0.6rem;
+        font-weight: 700;
+        line-height: 1rem;
+        letter-spacing: 0.05rem;
+        background-color: #4DB0E2;
+        border-radius: 50%; }
     #summary #servicios-icons .icon:hover .line {
       transform: scale(0); }
     #summary #servicios-icons .icon:hover svg {
       transform: translateY(1rem); }
     #summary #servicios-icons .icon:hover svg path {
-      fill: #5e5e5e; }
+      fill: #4DB0E2; }
     #summary #servicios-icons .icon:hover svg circle {
-      fill: #5e5e5e; }
+      fill: #4DB0E2; }
+
+#technology {
+  background-color: #5e5e5e;
+  padding: 3rem; }
+  #technology h4 {
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    color: #fff;
+    width: 100%;
+    text-align: center; }
 
 .article {
-  background-color: #5e5e5e;
   font-size: 0.5rem;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.05rem;
-  padding: 3rem;
   color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: relative; }
-  .article.box-servicio {
-    padding: 3.5rem;
-    background-color: transparent;
-    color: #333333; }
-    .article.box-servicio .article-text h4 {
-      color: #4DB0E2; }
-    .article.box-servicio .article-text p {
-      color: #333333;
-      font-weight: 400; }
-    .article.box-servicio .lenguajes .white svg path {
-      fill: rgba(77, 176, 226, 0.8); }
-  .article.right {
-    background-color: #fff;
-    color: #5e5e5e;
-    text-align: right; }
-    .article.right .article-text {
-      order: 2;
-      font-weight: 400; }
-      .article.right .article-text h4 {
-        color: #4DB0E2; }
-    .article.right .lenguajes {
-      order: 1; }
-    .article.right .lng-text {
-      text-align: left; }
-  .article#ux .article-text, .article#testing .article-text, .article#seo .article-text {
-    width: 58%; }
-  .article#cm .article-text {
-    width: 45%; }
+  .article.right .article-text {
+    order: 2; }
+    .article.right .article-text h5 {
+      text-align: right; }
+  .article.right .lenguajes {
+    left: -1.6rem; }
+  .article.left .lenguajes {
+    left: 1.6rem; }
   .article .article-text {
-    width: 35%; }
-    .article .article-text h4 {
-      font-size: 1rem;
+    width: 32%; }
+    .article .article-text h5 {
+      font-size: 0.7rem;
       font-weight: 700;
       line-height: 1.2;
       letter-spacing: 0.05rem;
@@ -518,7 +533,8 @@ nav #under-servicios {
       margin-bottom: 0.4rem; }
     .article .article-text p {
       margin-top: 1rem;
-      margin-bottom: .4rem; }
+      margin-bottom: .4rem;
+      text-align: justify; }
     .article .article-text a {
       font-size: 0.6rem;
       font-weight: 700;
@@ -527,12 +543,14 @@ nav #under-servicios {
       color: #fff; }
       .article .article-text a.color {
         color: #4DB0E2; }
+  .article:first-of-type {
+    margin-bottom: 4rem; }
 
 .lenguajes {
-  width: 55%;
+  width: 60%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  row-gap: 6vw;
+  row-gap: 2rem;
   position: relative;
   top: 0;
   left: 0;
@@ -541,17 +559,15 @@ nav #under-servicios {
     cursor: auto; }
   .lenguajes .lng {
     font-size: 0.4rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.05rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    .lenguajes .lng.white svg path {
+    .lenguajes .lng.white svg path, .lenguajes .lng.blue svg path {
       fill: rgba(255, 255, 255, 0.8); }
-    .lenguajes .lng.blue svg path {
-      fill: rgba(77, 176, 226, 0.8); }
     .lenguajes .lng p {
       -webkit-transition: font 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
     .lenguajes .lng svg {
@@ -560,7 +576,7 @@ nav #under-servicios {
       -webkit-transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
     .lenguajes .lng .show {
       margin-top: 0.3rem;
-      color: #4DB0E2;
+      color: #fff;
       width: .8rem;
       height: .8rem;
       border-radius: 50%;
@@ -568,14 +584,11 @@ nav #under-servicios {
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      border: 0.035rem solid #4DB0E2;
+      border: 0.05rem solid #fff;
       font-size: 0.45rem;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 1.5;
       letter-spacing: 0.05rem; }
-      .lenguajes .lng .show.first {
-        color: #fff;
-        border-color: #fff; }
 
 .lng-text {
   width: 55%;
@@ -604,7 +617,7 @@ nav #under-servicios {
     .lng-text .lng-back .show {
       transform: rotate(180deg);
       margin-top: 0.3rem;
-      color: #4DB0E2;
+      color: #fff;
       width: .8rem;
       height: .8rem;
       border-radius: 50%;
@@ -612,114 +625,68 @@ nav #under-servicios {
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      border: 0.035rem solid #4DB0E2;
+      border: 0.05rem solid #fff;
       font-size: 0.45rem;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 1.5;
       letter-spacing: 0.05rem; }
-      .lng-text .lng-back .show.first {
-        color: #fff;
-        border-color: #fff; }
   .lng-text .info {
     width: 60%;
     margin-left: 2rem; }
 
-#cm-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 45%; }
-  #cm-icons svg {
-    width: 80%; }
-    #cm-icons svg path {
-      fill: rgba(255, 255, 255, 0.8); }
-    #cm-icons svg line {
-      stroke-dasharray: 50;
-      -webkit-animation: dash 5s linear infinite; }
-
-@-webkit-keyframes dash {
-  to {
-    stroke-dashoffset: 800; } }
-
-@-webkit-keyframes draw {
-  to {
-    stroke-dashoffset: 0; } }
-
-#ux-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-right: 2rem;
-  width: 80%; }
-  #ux-icons svg {
-    width: 55%; }
-    #ux-icons svg path, #ux-icons svg line, #ux-icons svg circle, #ux-icons svg rect, #ux-icons svg ellipse, #ux-icons svg polygon {
-      stroke: rgba(77, 176, 226, 0.8); }
-    #ux-icons svg #content line, #ux-icons svg #content rect {
-      stroke-dasharray: 800;
-      stroke-dashoffset: 800;
-      -webkit-animation: draw 2s linear infinite; }
-    #ux-icons svg #popup line {
-      stroke-dasharray: 50;
-      -webkit-animation: dash 5s linear infinite; }
-
-#seo-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-left: 4rem;
-  width: 80%; }
-  #seo-icons svg {
-    width: 55%; }
-    #seo-icons svg path, #seo-icons svg line, #seo-icons svg circle, #seo-icons svg rect, #seo-icons svg polyline {
-      stroke: rgba(255, 255, 255, 0.8);
+#clients {
+  padding: 2.5rem 5rem;
+  background-color: #ebebeb; }
+  #clients .glide {
+    position: relative; }
+  #clients .glide__slide {
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  #clients img {
+    width: 90%; }
+  #clients h4 {
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    width: 100%;
+    text-align: center;
+    color: rgba(65, 65, 65, 0.8);
+    margin-bottom: 2rem; }
+  #clients .glide__arrows button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer; }
+    #clients .glide__arrows button#back {
+      position: absolute;
+      top: 50%;
+      left: -2rem;
+      transform: translateY(-50%); }
+      #clients .glide__arrows button#back svg {
+        transform: rotate(180deg); }
+    #clients .glide__arrows button#next {
+      position: absolute;
+      top: 50%;
+      right: -2rem;
+      transform: translateY(-50%); }
+  #clients .glide__arrows svg {
+    height: 1rem; }
+    #clients .glide__arrows svg path {
       fill: none;
-      stroke-width: 6; }
-    #seo-icons svg g#name path, #seo-icons svg g#lines polyline {
-      stroke: none;
-      fill: rgba(255, 255, 255, 0.8); }
-    #seo-icons svg #arrow polyline {
-      stroke-dasharray: 800;
-      stroke-dashoffset: 800;
-      -webkit-animation: draw 1s linear infinite; }
-    #seo-icons svg #lupa circle, #seo-icons svg #lupa line {
-      stroke-dasharray: 5;
-      -webkit-animation: dash 5s linear infinite; }
-
-#test-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-right: 4rem;
-  width: 80%; }
-  #test-icons svg {
-    width: 55%; }
-    #test-icons svg path, #test-icons svg line, #test-icons svg circle, #test-icons svg rect, #test-icons svg polyline {
-      stroke: rgba(77, 176, 226, 0.8);
-      fill: none;
-      stroke-width: 6; }
-    #test-icons svg #config {
-      stroke: rgba(77, 176, 226, 0.8); }
-      #test-icons svg #config path {
-        transform-origin: center center;
-        -webkit-animation: rotate 2s linear infinite; }
-    #test-icons svg #text line, #test-icons svg #text path {
-      stroke-dasharray: 800;
-      stroke-dashoffset: 800;
-      -webkit-animation: draw 2s linear infinite; }
-    #test-icons svg #lupa circle {
-      stroke-dasharray: 100;
-      -webkit-animation: dash 5s linear infinite; }
-
-@-webkit-keyframes rotate {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+      stroke: rgba(65, 65, 65, 0.8);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 10px;
+      -webkit-transition: all 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+    #clients .glide__arrows svg:hover path {
+      stroke: #4DB0E2; }
 
 #contacto {
   position: relative;
@@ -1068,26 +1035,38 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed; }
-  #banner-servicios.cm-banner {
-    background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/cm.jpg);
+  #banner-servicios.marketing-banner {
+    background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/marketing.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed; }
-  #banner-servicios.ux-banner {
-    background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/ux.jpg);
+  #banner-servicios.mobile-banner {
+    background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed; }
-  #banner-servicios.seo-banner {
-    background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/seo.jpg);
+  #banner-servicios.ecommerce-banner {
+    background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/ecommerce.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; }
+  #banner-servicios.systems-banner {
+    background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/systems.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed; }
   #banner-servicios.testing-banner {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/testing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; }
+  #banner-servicios.ux-banner {
+    background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/ux.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1332,9 +1311,16 @@ footer {
     #nosotros img:hover {
       -webkit-filter: grayscale(100%); }
   #metodologia {
-    margin-top: 35vw; }
+    padding: 3rem 1.5rem; }
     #metodologia #metodologia-grid {
       grid-template-columns: 1fr; }
+      #metodologia #metodologia-grid p {
+        font-size: 0.6rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 0.05rem; }
+      #metodologia #metodologia-grid svg {
+        height: 3rem; }
   footer {
     display: flex;
     flex-direction: column;
@@ -1344,43 +1330,59 @@ footer {
       margin-top: 0.8rem; }
   #banner-section p {
     width: 80%; }
+  #servicios {
+    margin-top: 6rem; }
   #summary {
-    margin-top: 20vw;
-    margin-bottom: 18vw; }
+    padding: 0 2rem;
+    margin-bottom: 3rem; }
     #summary #servicios-icons {
       grid-template-columns: 1fr;
-      row-gap: 4rem; }
+      row-gap: 3rem; }
       #summary #servicios-icons a svg {
-        height: 3rem;
-        margin-bottom: 1rem; }
-      #summary #servicios-icons a .line {
-        display: none; }
-      #summary #servicios-icons a p {
-        width: 100%;
-        font-size: .8rem;
-        font-weight: 400; }
+        height: 2.4rem; }
+      #summary #servicios-icons a .title {
+        font-size: 0.6rem;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.05rem; }
+      #summary #servicios-icons a .text {
+        width: 85%;
+        font-size: 0.6rem;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: 0.05rem; }
+      #summary #servicios-icons a .more {
+        margin-top: .5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: 0.05rem;
+        background-color: #4DB0E2;
+        border-radius: 50%; }
+      #summary #servicios-icons .icon:hover .line {
+        transform: scale(0); }
       #summary #servicios-icons .icon:hover svg {
-        transform: translateY(0); }
+        transform: translateY(1rem); }
       #summary #servicios-icons .icon:hover svg path {
         fill: #4DB0E2; }
       #summary #servicios-icons .icon:hover svg circle {
         fill: #4DB0E2; }
+  #technology {
+    padding: 1.5rem; }
   .article {
-    padding: 2rem 1.5rem;
     display: block; }
-    .article.box-servicio {
-      padding: 2rem; }
     .article.right {
       text-align: left; }
-    .article #ux-icons, .article #cm-icons, .article #test-icons, .article #seo-icons {
-      width: 100%;
-      margin-top: 8vw;
-      margin-left: 0;
-      margin-right: 0; }
-      .article #ux-icons#test-icons, .article #cm-icons#test-icons, .article #test-icons#test-icons, .article #seo-icons#test-icons {
-        margin-left: -1rem; }
-    .article#ux .article-text, .article#testing .article-text, .article#cm .article-text, .article#seo .article-text {
-      width: 100%; }
+      .article.right .article-text h5 {
+        text-align: left; }
+      .article.right .lenguajes {
+        left: 0; }
+    .article.left .lenguajes {
+      left: 0; }
     .article .article-text {
       width: 100%; }
       .article .article-text a {
@@ -1396,6 +1398,7 @@ footer {
           background-color: #4DB0E2; }
     .article .lenguajes {
       width: 100%;
+      right: 0;
       margin-top: 2rem;
       row-gap: 10vw; }
   #join-us .lenguajes {
@@ -1457,7 +1460,13 @@ footer {
       font-size: 0.5rem;
       font-weight: 700;
       line-height: 1.6;
-      letter-spacing: 0.05rem; } }
+      letter-spacing: 0.05rem; }
+  #clients {
+    padding: 2.5rem; }
+    #clients .glide__arrows button#back {
+      left: -1.5rem; }
+    #clients .glide__arrows button#next {
+      right: -1.5rem; } }
 
 @media screen and (orientation: landscape) and (max-width: 1024px) {
   html {
