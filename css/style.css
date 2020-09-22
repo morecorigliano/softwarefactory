@@ -423,7 +423,7 @@ nav #under-servicios {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    color: #5e5e5e;
+    color: #4DB0E2;
     width: 100%;
     text-align: center; }
   #summary #servicios-icons {
@@ -490,149 +490,60 @@ nav #under-servicios {
       fill: #4DB0E2; }
 
 #technology {
-  background-color: #5e5e5e;
-  padding: 3rem; }
+  padding: 0 3rem; }
   #technology h4 {
-    margin-bottom: 4rem;
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    color: #fff;
+    color: #4DB0E2;
     width: 100%;
     text-align: center; }
-
-.article {
-  font-size: 0.5rem;
-  font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: 0.05rem;
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  position: relative; }
-  .article.right .article-text {
-    order: 2; }
-    .article.right .article-text h5 {
-      text-align: right; }
-  .article.right .lenguajes {
-    left: -1.6rem; }
-  .article.left .lenguajes {
-    left: 1.6rem; }
-  .article .article-text {
-    width: 32%; }
-    .article .article-text h5 {
-      font-size: 0.7rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: 0.05rem;
-      color: #fff;
-      margin-bottom: 0.4rem; }
-    .article .article-text p {
-      margin-top: 1rem;
-      margin-bottom: .4rem;
-      text-align: justify; }
-    .article .article-text a {
-      font-size: 0.6rem;
-      font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.05rem;
-      color: #fff; }
-      .article .article-text a.color {
-        color: #4DB0E2; }
-  .article:first-of-type {
-    margin-bottom: 4rem; }
-
-.lenguajes {
-  width: 60%;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  row-gap: 2rem;
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: pointer; }
-  .lenguajes#join-lng {
-    cursor: auto; }
-  .lenguajes .lng {
-    font-size: 0.4rem;
-    font-weight: 400;
-    line-height: 1.5;
+  #technology h5 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
     letter-spacing: 0.05rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .lenguajes .lng.white svg path, .lenguajes .lng.blue svg path {
-      fill: rgba(255, 255, 255, 0.8); }
-    .lenguajes .lng p {
-      -webkit-transition: font 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-    .lenguajes .lng svg {
-      height: 1.4rem;
-      margin-bottom: 0.5rem;
-      -webkit-transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-    .lenguajes .lng .show {
-      margin-top: 0.3rem;
-      color: #fff;
-      width: .8rem;
-      height: .8rem;
-      border-radius: 50%;
+    color: black;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.8rem;
+    margin-bottom: 1.2rem; }
+  #technology .lng-grid {
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 1.2rem; }
+    #technology .lng-grid .card {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0rem 0rem 1vh rgba(59, 51, 114, 0.2);
+      padding: .8rem .6rem;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
-      justify-content: center;
-      border: 0.05rem solid #fff;
-      font-size: 0.45rem;
-      font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.05rem; }
-
-.lng-text {
-  width: 55%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  display: none; }
-  .lng-text .lng-back {
-    font-size: 0.4rem;
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 0.05rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer; }
-    .lng-text .lng-back svg {
-      height: 1.4rem;
-      margin-bottom: 0.5rem;
-      -webkit-transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-    .lng-text .lng-back .show {
-      transform: rotate(180deg);
-      margin-top: 0.3rem;
-      color: #fff;
-      width: .8rem;
-      height: .8rem;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      border: 0.05rem solid #fff;
-      font-size: 0.45rem;
-      font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.05rem; }
-  .lng-text .info {
-    width: 60%;
-    margin-left: 2rem; }
+      border-radius: .2rem;
+      -webkit-transition: all 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      #technology .lng-grid .card:hover {
+        transform: scale(1.1); }
+      #technology .lng-grid .card svg {
+        height: 1.5rem; }
+      #technology .lng-grid .card img {
+        height: 1.5rem; }
+      #technology .lng-grid .card .title {
+        color: #5e5e5e;
+        font-size: 0.45rem;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.05rem;
+        margin: .4rem 0; }
+      #technology .lng-grid .card .text {
+        color: #333333;
+        font-size: 0.45rem;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.05rem; }
 
 #clients {
   padding: 2.5rem 5rem;
@@ -863,8 +774,31 @@ nav #under-servicios {
     #join-us #postulate svg {
       transform: rotate(90deg);
       height: 1rem; }
-  #join-us #join-lng {
-    grid-template-columns: 20% 20% 20% 20% 20%; }
+  #join-us .lenguajes {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    row-gap: 2rem;
+    position: relative;
+    top: 0;
+    left: 0; }
+    #join-us .lenguajes .lng {
+      font-size: 0.4rem;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.05rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #join-us .lenguajes .lng.white svg path {
+        fill: rgba(255, 255, 255, 0.8); }
+      #join-us .lenguajes .lng p {
+        -webkit-transition: font 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      #join-us .lenguajes .lng svg {
+        height: 1.4rem;
+        margin-bottom: 0.5rem;
+        -webkit-transition: transform 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
 
 #form-wrapper {
   display: flex;
@@ -1373,44 +1307,13 @@ footer {
         fill: #4DB0E2; }
   #technology {
     padding: 1.5rem; }
-  .article {
-    display: block; }
-    .article.right {
-      text-align: left; }
-      .article.right .article-text h5 {
-        text-align: left; }
-      .article.right .lenguajes {
-        left: 0; }
-    .article.left .lenguajes {
-      left: 0; }
-    .article .article-text {
-      width: 100%; }
-      .article .article-text a {
-        color: #5e5e5e;
-        width: 100%;
-        display: block;
-        padding: .4rem 0;
-        text-align: center;
-        background-color: white;
-        margin-top: 1rem; }
-        .article .article-text a.color {
-          color: white;
-          background-color: #4DB0E2; }
-    .article .lenguajes {
-      width: 100%;
-      right: 0;
-      margin-top: 2rem;
-      row-gap: 10vw; }
   #join-us .lenguajes {
-    width: 80%; }
+    width: 85%; }
   #formulario-join {
     width: 100%;
     padding: 0 6vw; }
   #call-contacto {
     padding: 2rem 1rem; }
-  .lng-text {
-    margin-top: 2rem;
-    width: 100%; }
   #banner-servicios {
     display: flex;
     flex-direction: row;
@@ -1466,7 +1369,27 @@ footer {
     #clients .glide__arrows button#back {
       left: -1.5rem; }
     #clients .glide__arrows button#next {
-      right: -1.5rem; } }
+      right: -1.5rem; }
+  #technology {
+    padding: 0 1.5rem; }
+    #technology .lng-grid {
+      display: block; }
+      #technology .lng-grid .card {
+        margin-bottom: 1rem; }
+        #technology .lng-grid .card:hover {
+          transform: scale(1.1); }
+        #technology .lng-grid .card svg {
+          height: 2rem; }
+        #technology .lng-grid .card img {
+          height: 2rem; }
+        #technology .lng-grid .card .title {
+          font-size: .6rem;
+          margin: .8rem 0; }
+        #technology .lng-grid .card .text {
+          font-size: .6rem;
+          text-align: center; }
+        #technology .lng-grid .card:hover {
+          transform: none; } }
 
 @media screen and (orientation: landscape) and (max-width: 1024px) {
   html {

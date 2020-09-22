@@ -92,32 +92,6 @@ for (var i = 0; i < white.length; i++) {
   });
 }
 
-var blue = document.getElementsByClassName("blue");
-
-for (var i = 0; i < blue.length; i++) {
-  blue[i].addEventListener("mouseover", function(){
-    this.classList.remove("blue");
-    this.children[0].style.transform = "scale(1.3)";
-  });
-  blue[i].addEventListener("mouseout", function(){
-    this.classList.add("blue");
-    this.children[0].style.transform = "scale(1)";
-  });
-}
-
-var dark = document.getElementsByClassName("dark");
-
-for (var i = 0; i < dark.length; i++) {
-  dark[i].addEventListener("mouseover", function(){
-    this.classList.remove("dark");
-    this.style.transform = "scale(1.3)";
-  });
-  dark[i].addEventListener("mouseout", function(){
-    this.classList.add("dark");
-    this.style.transform = "scale(1)";
-  });
-}
-
 ////// animación de titulo de inputs en el form ////////
 
 var formInputs = document.getElementsByClassName("form");
@@ -130,52 +104,6 @@ for (var i = 0; i < formInputs.length; i++) {
         this.parentElement.children[1].classList.add("filled");
         }
     });
-}
-
-////// mostrar texto de cada lenguaje al hacer click ////////
-
-var lngsFront = document.getElementById("lngs-front");
-var lngsBack = document.getElementById("lngs-back");
-var lngText= document.getElementsByClassName("lng-text");
-
-for (var i = 0; i < white.length; i++) {
-    white[i].addEventListener('click', function(){
-        var className = this.classList[1];
-        lngsFront.style.display = "none";
-        lngsFront.style.position = "absolute";
-        for (var b = 0; b < lngText.length; b++) {
-            if(lngText[b].classList.contains(className)){
-              lngText[b].style.position = "relative";
-              lngText[b].style.display = "flex";
-              lngText[b].addEventListener('click', function(){
-                this.style.position = "absolute";
-                this.style.display = "none";
-                lngsFront.style.display = "grid";
-                lngsFront.style.position = "relative";
-              })
-            }
-        }
-    });
-}
-
-for (var i = 0; i < blue.length; i++) {
-  blue[i].addEventListener('click', function(){
-      var className = this.classList[1];
-      lngsBack.style.display = "none";
-      lngsBack.style.position = "absolute";
-      for (var b = 0; b < lngText.length; b++) {
-          if(lngText[b].classList.contains(className)){
-            lngText[b].style.position = "relative";
-            lngText[b].style.display = "flex";
-            lngText[b].addEventListener('click', function(){
-              this.style.position = "absolute";
-              this.style.display = "none";
-              lngsBack.style.display = "grid";
-              lngsBack.style.position = "relative";
-            })
-          }
-      }
-  });
 }
 
 ////// acortar logo en scroll ////////
