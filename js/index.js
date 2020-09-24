@@ -43,3 +43,18 @@ next.addEventListener("click", function(){
 back.addEventListener("click", function(){
   carrousel.style.transform = "translateX(0)";
 });
+
+//////// efecto hover metodologia ////////
+
+var dark = document.getElementsByClassName("dark");
+
+for (var i = 0; i < dark.length; i++) {
+  dark[i].addEventListener("mouseover", function(){
+    this.classList.remove("dark");
+    this.style.transform = "scale(1.3)";
+  });
+  dark[i].addEventListener("mouseout", function(){
+    this.classList.add("dark");
+    this.style.transform = "scale(1)";
+  });
+}
