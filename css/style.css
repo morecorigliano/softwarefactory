@@ -319,21 +319,17 @@ nav #under-servicios {
       transform: rotate(90deg); }
 
 #nosotros {
-  width: 85vw;
-  margin: 0 7.5vw;
-  background-color: #4DB0E2;
+  background: linear-gradient(90deg, rgba(68, 68, 68, 0.7) 0%, rgba(68, 68, 68, 0.7) 100%), url(../img/nosotros.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   position: relative;
-  top: -10vh;
-  padding: 10vw 6vw 14vw 6vw;
+  padding: 4rem;
   -webkit-animation-name: moveUp;
   -webkit-animation-duration: .5s;
   -webkit-animation-timing-function: ease-in-out;
-  -webkit-clip-path: polygon(0 90%, 0 0, 150% 0, 150% 90%, 58% 90%, 50% 100%, 42% 90%);
-  overflow: visible;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between; }
+  clip-path: polygon(100% 5%, 100% 100%, 0 95%, 0 0); }
   #nosotros #nosotros-text {
     width: 65%; }
     #nosotros #nosotros-text h4 {
@@ -356,32 +352,14 @@ nav #under-servicios {
       background-color: #fff;
       display: block;
       margin-bottom: 1rem; }
-  #nosotros #nosotros-img {
-    position: relative; }
-  #nosotros #border {
-    border: #fff 0.06rem solid;
-    position: absolute;
-    top: -5%;
-    left: 28%;
-    width: 35vw;
-    height: 25vw; }
-  #nosotros img {
-    width: 35vw;
-    height: 25vw;
-    position: relative;
-    left: 25%;
-    object-fit: cover;
-    -webkit-transition: all 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
-  #nosotros img:hover {
-    -webkit-filter: grayscale(0%); }
 
 #metodologia {
   padding: 3rem;
   text-align: center; }
   #metodologia h4 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
@@ -396,19 +374,19 @@ nav #under-servicios {
       align-items: center;
       justify-content: center; }
     #metodologia #metodologia-grid p {
-      font-size: 0.5rem;
+      font-size: 0.45rem;
       font-weight: 400;
       line-height: 1.2;
       letter-spacing: 0.05rem; }
     #metodologia #metodologia-grid svg {
-      height: 2rem;
-      margin-bottom: 1rem;
+      height: 1.3rem;
+      margin-bottom: .5rem;
       -webkit-transition: transform 0.3s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
       #metodologia #metodologia-grid svg.dark path {
         fill: #333333; }
 
 #servicios {
-  margin-top: 1rem; }
+  margin-top: 2rem; }
 
 #summary {
   width: 100%;
@@ -500,21 +478,33 @@ nav #under-servicios {
     color: #4DB0E2;
     width: 100%;
     text-align: center; }
+  #technology #technology-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 0.05rem solid #e0e0e0;
+    margin-bottom: 1.2rem;
+    margin-top: 1.8rem; }
   #technology h5 {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.05rem;
-    color: black;
+    color: #3d3d3d;
     width: 100%;
     text-align: center;
-    margin-top: 1.8rem;
-    margin-bottom: 1.2rem; }
+    padding-bottom: .6rem;
+    cursor: pointer; }
+    #technology h5.current {
+      color: #4DB0E2;
+      border-bottom: 0.12rem solid #4DB0E2; }
   #technology .lng-grid {
     display: grid;
     column-gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 1.2rem; }
+    row-gap: 1.2rem;
+    display: none; }
+    #technology .lng-grid.backend {
+      display: grid; }
     #technology .lng-grid .card {
       background-color: rgba(255, 255, 255, 0.9);
       box-shadow: 0rem 0rem 1vh rgba(59, 51, 114, 0.2);
@@ -546,7 +536,7 @@ nav #under-servicios {
         letter-spacing: 0.05rem; }
 
 #clients {
-  padding: 2.5rem 5rem;
+  padding: 1.5rem 5rem;
   background-color: #ebebeb; }
   #clients .glide {
     position: relative; }
@@ -557,7 +547,7 @@ nav #under-servicios {
     justify-content: center;
     align-items: center; }
   #clients img {
-    width: 90%; }
+    width: 85%; }
   #clients h4 {
     font-size: 0.6rem;
     font-weight: 400;
@@ -1241,25 +1231,9 @@ footer {
         line-height: 2;
         letter-spacing: 0.05rem; }
   #nosotros {
-    width: 100%;
-    margin: 0;
-    top: 0;
-    padding: 15vw 12vw 0 12vw;
-    display: block;
-    -webkit-clip-path: none; }
+    padding: 4rem 2rem; }
     #nosotros #nosotros-text {
       width: 100%; }
-    #nosotros img {
-      width: 75vw;
-      height: 50vw;
-      left: 0;
-      margin-top: -8vw;
-      top: 15vw;
-      display: block; }
-    #nosotros #border {
-      display: none; }
-    #nosotros img:hover {
-      -webkit-filter: grayscale(100%); }
   #metodologia {
     padding: 3rem 1.5rem; }
     #metodologia #metodologia-grid {
@@ -1270,7 +1244,7 @@ footer {
         line-height: 1.2;
         letter-spacing: 0.05rem; }
       #metodologia #metodologia-grid svg {
-        height: 3rem; }
+        height: 2rem; }
   footer {
     display: flex;
     flex-direction: column;
@@ -1280,8 +1254,6 @@ footer {
       margin-top: 0.8rem; }
   #banner-section p {
     width: 80%; }
-  #servicios {
-    margin-top: 6rem; }
   #summary {
     padding: 0 2rem;
     margin-bottom: 3rem; }
@@ -1321,8 +1293,6 @@ footer {
         fill: #4DB0E2; }
       #summary #servicios-icons .icon:hover svg circle {
         fill: #4DB0E2; }
-  #technology {
-    padding: 1.5rem; }
   #join-us .lenguajes {
     width: 85%; }
   #formulario-join {
@@ -1381,31 +1351,46 @@ footer {
       line-height: 1.6;
       letter-spacing: 0.05rem; }
   #clients {
-    padding: 2.5rem; }
+    padding: 1.5rem 2.5rem; }
     #clients .glide__arrows button#back {
       left: -1.5rem; }
     #clients .glide__arrows button#next {
       right: -1.5rem; }
   #technology {
     padding: 0 1.5rem; }
+    #technology #technology-header {
+      grid-template-columns: 1fr 1fr;
+      border-bottom: none;
+      margin: 1.8rem 0;
+      row-gap: .8rem;
+      column-gap: .8rem; }
+    #technology h5 {
+      padding: .4rem;
+      font-size: .6rem;
+      background-color: whitesmoke; }
+      #technology h5.current {
+        background-color: #4DB0E2;
+        border-bottom: none;
+        color: #fff; }
     #technology .lng-grid {
-      display: block; }
-      #technology .lng-grid .card {
-        margin-bottom: 1rem; }
-        #technology .lng-grid .card:hover {
-          transform: scale(1.1); }
-        #technology .lng-grid .card svg {
-          height: 2rem; }
-        #technology .lng-grid .card img {
-          height: 2rem; }
-        #technology .lng-grid .card .title {
-          font-size: .6rem;
-          margin: .8rem 0; }
-        #technology .lng-grid .card .text {
-          font-size: .6rem;
-          text-align: center; }
-        #technology .lng-grid .card:hover {
-          transform: none; } }
+      display: none;
+      grid-template-columns: 1fr; }
+      #technology .lng-grid.backend {
+        display: grid; }
+      #technology .lng-grid .card:hover {
+        transform: scale(1.1); }
+      #technology .lng-grid .card svg {
+        height: 2rem; }
+      #technology .lng-grid .card img {
+        height: 2rem; }
+      #technology .lng-grid .card .title {
+        font-size: .6rem;
+        margin: .8rem 0; }
+      #technology .lng-grid .card .text {
+        font-size: .6rem;
+        text-align: center; }
+      #technology .lng-grid .card:hover {
+        transform: none; } }
 
 @media screen and (orientation: landscape) and (max-width: 1024px) {
   html {

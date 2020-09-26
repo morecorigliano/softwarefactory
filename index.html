@@ -202,14 +202,6 @@
             <p data-aos="fade-right" data-aos-offset="100">We are an IT, Consulting and Software Development company based in Montevideo & Buenos Aires.</p> 
             <p data-aos="fade-right" data-aos-offset="200">We proudly devote ourselves to creation of innovative, scalable, digital solutions taking into consideration our customer needs and priorities.</p> 
         </div>
-
-        <div id="nosotros-img">
-            <img src="img/nosotros.jpg" alt="nosotros">
-            <div id="border"></div>
-        </div>
-
-        <div id="connect"></div>
-
     </div>
 
     <div id="servicios">
@@ -1420,8 +1412,14 @@
 
     <div id="technology">
       <h4>Our technology stack</h4>
-      <h5>Backend</h5>
-      <div class="lng-grid">
+      <div id="technology-header">
+        <h5 class="tech-btn backend current">Backend</h5>
+        <h5 class="tech-btn web">Web Application</h5>
+        <h5 class="tech-btn databases">Databases</h5>
+        <h5 class="tech-btn deployment">Deployment</h5>
+        <h5 class="tech-btn project">Project management</h5>
+      </div>
+      <div class="lng-grid backend">
         <a href="https://reactjs.org/" target="_blank" class="card" data-aos="flip-left" data-aos-offset="25">
           <svg id="Grupo_31" data-name="Grupo 31" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.598 85">
             <path id="Trazado_14" data-name="Trazado 14" d="M-1417.866,401h-4.067c-5.986-1.554-10.97-4.87-15.505-8.927-1.111-.994-1.928-1.107-3.105-.064-4.769,4.222-10.034,7.591-16.365,8.992h-3.66c-5.169-1.652-7.04-5.65-7.773-10.612a36.866,36.866,0,0,1,.8-13.1c.394-1.869.073-2.8-1.895-3.418a37.27,37.27,0,0,1-12.994-6.942c-6.126-5.15-6.1-11.854.046-16.908a38.98,38.98,0,0,1,13.285-6.824c1.518-.48,2.039-1.235,1.667-2.84a43.932,43.932,0,0,1-1.215-9.86c-.012-8.24,2.271-12.054,8.482-14.5h2.847c2.033.735,4.18,1.085,6.161,2.027a44.4,44.4,0,0,1,10.53,7.2c.971.869,1.638,1.118,2.719.126A38.994,38.994,0,0,1-1421.933,316h4.067c4.579,1.424,6.569,4.905,7.437,9.306a36.524,36.524,0,0,1-.53,14.918c-.388,1.8.105,2.523,1.813,3.077a38.219,38.219,0,0,1,13.71,7.327c5.16,4.52,5.367,10.13.571,15.023-3.906,3.986-8.777,6.307-13.979,7.987-1.757.567-2.37,1.3-1.9,3.208a33.059,33.059,0,0,1,.966,10.893C-1410.3,393.437-1411.381,398.895-1417.866,401Zm-21.309-57.733v.012c-2.3,0-4.605.012-6.907,0a2.973,2.973,0,0,0-2.721,1.441,116.164,116.164,0,0,0-7.1,12.312,3.061,3.061,0,0,0-.026,2.9,116.013,116.013,0,0,0,7.1,12.313,2.968,2.968,0,0,0,2.689,1.493q6.907-.028,13.815,0a2.988,2.988,0,0,0,2.717-1.444,113.854,113.854,0,0,0,7.169-12.505,2.95,2.95,0,0,0-.077-2.9c-2.153-3.995-4.341-7.966-6.823-11.773a3.56,3.56,0,0,0-3.333-1.858C-1434.84,343.31-1437.009,343.267-1439.176,343.267Zm-43.731,15.172a7.586,7.586,0,0,0,2.717,5.052,36.362,36.362,0,0,0,12.411,6.715c1.27.4,1.985.234,2.468-1.135,1.079-3.058,2.29-6.071,3.47-9.093a3.335,3.335,0,0,0,.145-2.554c-1.23-3.148-2.457-6.3-3.639-9.464a1.436,1.436,0,0,0-2.04-1.019c-4.749,1.482-9.287,3.385-13.03,6.778A6.73,6.73,0,0,0-1482.907,358.439Zm18.244,28.3c.168,1.212.3,2.835.631,4.417,1.075,5.192,4.354,6.99,9.268,5.022a35.946,35.946,0,0,0,11.588-7.331c.9-.854.934-1.418.16-2.347-2.163-2.6-4.251-5.254-6.346-7.9a2.918,2.918,0,0,0-2.039-1.157c-3.216-.421-6.435-.833-9.632-1.376-1.462-.249-2.15.239-2.449,1.63A66.57,66.57,0,0,0-1464.663,386.735Zm50.87-1.042a44.3,44.3,0,0,0-.891-8c-.282-1.491-1.08-2.022-2.6-1.757-3.136.547-6.287,1.009-9.437,1.467a3.024,3.024,0,0,0-2.1,1.08q-3.205,4.071-6.418,8.136c-.516.654-.74,1.322,0,1.965,3.9,3.4,7.917,6.632,13.062,7.97,3.854,1,6.127-.211,7.438-3.977A22.693,22.693,0,0,0-1413.793,385.693Zm-50.826-54.871a80.705,80.705,0,0,0,1.194,8.812c.3,1.35.987,1.743,2.317,1.509,2.8-.494,5.6-.971,8.419-1.29a5.341,5.341,0,0,0,4.127-2.52,48.872,48.872,0,0,1,3.78-4.764c2.767-3.162,2.822-3.171-.389-5.837-3.516-2.919-7.292-5.4-11.856-6.374-3.214-.687-5.205.4-6.417,3.453C-1464.334,326.054-1464.322,328.446-1464.619,330.822Zm50.519,2a22.8,22.8,0,0,0-1.1-9.321c-1.167-2.727-3.073-3.8-5.992-3.269a15.813,15.813,0,0,0-2.924.824,37.224,37.224,0,0,0-11.1,7.369c-.9.8-.608,1.463.033,2.25q3.076,3.776,6.069,7.619a3.7,3.7,0,0,0,2.577,1.408c3.144.466,6.286.954,9.416,1.505,1.282.226,1.867-.223,2.128-1.47A43.7,43.7,0,0,0-1414.1,332.82Zm-2.83,25.518a2.547,2.547,0,0,0,.089.584q2.091,5.293,4.2,10.577c.325.81,1,.85,1.7.6,4.888-1.706,9.661-3.629,13.351-7.469,2.783-2.9,2.776-5.442-.032-8.327-3.717-3.818-8.5-5.712-13.418-7.338-1.225-.4-1.7.275-2.071,1.295-.885,2.417-1.831,4.813-2.762,7.214A10.96,10.96,0,0,0-1416.93,358.338Zm-22.111,19.527v-.007q-1.92,0-3.84,0c-1.422,0-1.5.632-.7,1.587,1.165,1.4,2.378,2.75,3.547,4.142.7.832,1.35.752,2-.03,1.158-1.4,2.331-2.791,3.45-4.222.811-1.037.269-1.445-.811-1.465C-1436.615,377.847-1437.828,377.865-1439.04,377.865Zm16.105-5.019c1.409-.269,3.341-.627,5.267-1.01.978-.195,1.144-.852.838-1.688-.63-1.717-1.265-3.433-1.934-5.136-.426-1.085-.983-1.249-1.629-.137q-1.941,3.339-3.893,6.673C-1424.84,372.5-1424.565,372.943-1422.935,372.845Zm-32.363.1c.638-.047,1.214.236,1.506-.228s-.187-.882-.412-1.272c-1.249-2.167-2.523-4.32-3.786-6.48-.5-.859-1.028-1.162-1.487,0-.669,1.7-1.3,3.409-1.922,5.126-.43,1.195.155,1.792,1.287,2C-1458.451,372.389-1456.786,372.678-1455.3,372.941Zm15.974-33.8c1.283,0,2.566.011,3.849,0,1.1-.013,1.617-.413.792-1.45-1.092-1.374-2.233-2.709-3.35-4.063-.752-.911-1.5-.763-2.2.038-1.157,1.319-2.31,2.642-3.424,4-.742.9-.581,1.476.69,1.481C-1441.756,339.149-1440.54,339.145-1439.325,339.144Zm-16.088,5.093c-1.294.242-3.151.575-5,.943-1.02.2-1.314.87-.971,1.809.625,1.709,1.263,3.413,1.929,5.106.366.93.906.963,1.407.111,1.333-2.266,2.637-4.548,3.946-6.828C-1453.621,344.538-1453.811,344.1-1455.413,344.237Zm32.034-.026c-1.281-.194-1.475.3-.866,1.337q1.9,3.23,3.785,6.468c.585,1.008,1.144,1.156,1.613-.054.61-1.573,1.162-3.169,1.758-4.747.486-1.287-.06-1.914-1.3-2.13Q-1420.886,344.651-1423.378,344.211Z" transform="translate(1487.009 -316)" fill="#61dafb"/>
@@ -1586,8 +1584,7 @@
           <p class="text">Kotlin is a statically typed programming language that runs on top of Java and can also be compiled into JavaScript source code.</p>
         </a>
       </div>
-      <h5>Web Application</h5>
-      <div class="lng-grid">
+      <div class="lng-grid web">
         <a href="https://www.w3schools.com/" target="_blank" class="card" data-aos="flip-left" data-aos-offset="25">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.983 85">
             <g id="Grupo_373" data-name="Grupo 373" transform="translate(-3687.764 -2273.729)">
@@ -1626,8 +1623,7 @@
           <p class="text">Sass is a CSS preprocessor. An scripting language that extends CSS and makes the coding process simpler and more efficient.</p>
         </a>
       </div>
-      <h5>Databases</h5>
-      <div class="lng-grid">
+      <div class="lng-grid databases">
         <a href="https://www.mysql.com/" target="_blank" class="card" data-aos="flip-left" data-aos-offset="25">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.878 335.516">
             <g id="Grupo_6" data-name="Grupo 6" transform="translate(-122.818 1309.164)">
@@ -1673,8 +1669,7 @@
           <p class="text">Firebase is a Bass (Backend-as-a-service), built on Google’s infrastructure. It provides a variety of tools and services to develop quality apps and grow user base.</p>
         </a>
       </div>
-      <h5>Deployment</h5>
-      <div class="lng-grid">
+      <div class="lng-grid deployment">
         <a href="https://www.docker.com/" target="_blank" class="card" data-aos="flip-left" data-aos-offset="25">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640.67 460.694">
             <g id="Grupo_5" data-name="Grupo 5" transform="translate(-37.431 -1446.284)">
@@ -1729,8 +1724,7 @@
           <p class="text">Kubernetes is an open-source container-orchestration system for automating computer application deployment, scaling, and management.</p>
         </a>
       </div>
-      <h5>Project management</h5>
-      <div class="lng-grid">
+      <div class="lng-grid project">
         <a href="https://www.atlassian.com/software/jira" target="_blank" class="card" data-aos="flip-left" data-aos-offset="25">
           <img src="img/jira.png" alt="">           
           <p class="title">JIRA</p>
@@ -1763,7 +1757,7 @@
     <div id="metodologia">
       <h4>Our Methodology</h4>
       <div id="metodologia-grid">
-        <div class="method" data-aos="zoom-in-up" data-aos-offset="25">
+        <div class="method">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 531.7 566.9" style="enable-background:new 0 0 531.7 566.9;" xml:space="preserve" class="dark">
           <defs>
           </defs>
@@ -1805,7 +1799,7 @@
           </svg>
           <p>1. Understand your needs</p>
         </div>
-        <div class="method" data-aos="zoom-in-up" data-aos-offset="50">
+        <div class="method">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 498.8 566.9" style="enable-background:new 0 0 498.8 566.9;" xml:space="preserve" class="dark">
           <defs>
           </defs>
@@ -1867,7 +1861,7 @@
           </svg>
           <p>2. Develop the concept</p>
         </div>
-        <div class="method" data-aos="zoom-in-up" data-aos-offset="75">
+        <div class="method">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 566.9 566.9" style="enable-background:new 0 0 566.9 566.9;" xml:space="preserve" class="dark">
           <defs>
           </defs>
@@ -1898,7 +1892,7 @@
           </svg>
           <p>3. Identify the opportunities</p>
         </div>
-        <div class="method" data-aos="zoom-in-up" data-aos-offset="100">
+        <div class="method">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 566.9 566.9" style="enable-background:new 0 0 566.9 566.9;" xml:space="preserve" class="dark">
           <defs>
           </defs>
@@ -1941,7 +1935,7 @@
           </svg>
           <p>4. Design and build the platform</p>
         </div>
-        <div class="method" data-aos="zoom-in-up" data-aos-offset="125">
+        <div class="method">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 298.6 566.9" style="enable-background:new 0 0 298.6 566.9;" xml:space="preserve" class="dark">
           <defs>
           </defs>
@@ -1973,7 +1967,7 @@
           </svg>
           <p>5. Launch</p>
         </div>
-        <div class="method" data-aos="zoom-in-up" data-aos-offset="150">
+        <div class="method">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 624.5 566.9" style="enable-background:new 0 0 624.5 566.9;" xml:space="preserve" class="dark">
           <defs>
           </defs>

@@ -146,3 +146,23 @@ function myFunctionMax(mediaQueriesMax){
 
 }
 
+////// animacion technology stack ////////
+
+var techBtn = document.getElementsByClassName("tech-btn");
+var lngGrid = document.getElementsByClassName("lng-grid");
+
+for (var i = 0; i < techBtn.length; i++) {
+  techBtn[i].addEventListener("click", function(){
+    for (var i = 0; i < techBtn.length; i++) {
+      techBtn[i].classList.remove("current");
+    }
+    this.classList.add("current");
+    var className = this.classList[1];
+    for (var i = 0; i < lngGrid.length; i++) {
+      lngGrid[i].style.display = "none";
+      if(lngGrid[i].classList.contains(className)){
+        lngGrid[i].style.display = "grid";
+      }
+    }
+  });
+}
