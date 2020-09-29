@@ -319,7 +319,7 @@ nav #under-servicios {
       transform: rotate(90deg); }
 
 #nosotros {
-  background: linear-gradient(90deg, rgba(68, 68, 68, 0.7) 0%, rgba(68, 68, 68, 0.7) 100%), url(../img/nosotros.jpg);
+  background: linear-gradient(90deg, rgba(68, 68, 68, 0.8) 0%, rgba(68, 68, 68, 0.8) 100%), url(../img/nosotros.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -329,7 +329,7 @@ nav #under-servicios {
   -webkit-animation-name: moveUp;
   -webkit-animation-duration: .5s;
   -webkit-animation-timing-function: ease-in-out;
-  clip-path: polygon(100% 5%, 100% 100%, 0 95%, 0 0); }
+  -webkit-clip-path: polygon(100% 5%, 100% 100%, 0 95%, 0 0); }
   #nosotros #nosotros-text {
     width: 65%; }
     #nosotros #nosotros-text h4 {
@@ -967,50 +967,42 @@ footer {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/front.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; }
+    background-position: center; }
   #banner-servicios.back-banner {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/back.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; }
+    background-position: center; }
   #banner-servicios.marketing-banner {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/marketing.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; }
+    background-position: center; }
   #banner-servicios.mobile-banner {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; }
+    background-position: center; }
   #banner-servicios.ecommerce-banner {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/ecommerce.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; }
+    background-position: center; }
   #banner-servicios.systems-banner {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/systems.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; }
+    background-position: center; }
   #banner-servicios.testing-banner {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/testing.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; }
+    background-position: center; }
   #banner-servicios.ux-banner {
     background: linear-gradient(90deg, rgba(2, 51, 82, 0.5) 0%, rgba(2, 51, 82, 0.5) 100%), url(../img/ux.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; }
+    background-position: center; }
 
 #servicios-content {
   padding: 3rem 3.5rem; }
@@ -1231,7 +1223,8 @@ footer {
         line-height: 2;
         letter-spacing: 0.05rem; }
   #nosotros {
-    padding: 4rem 2rem; }
+    padding: 4rem 2rem;
+    background-attachment: initial; }
     #nosotros #nosotros-text {
       width: 100%; }
   #metodologia {
@@ -1344,7 +1337,8 @@ footer {
         #our-work #grid .grid-item:last-of-type {
           margin-bottom: 0; }
   #call-to-action {
-    padding: 2rem; }
+    padding: 2rem;
+    background-attachment: initial; }
     #call-to-action #request p {
       font-size: 0.5rem;
       font-weight: 700;
@@ -1417,7 +1411,7 @@ footer {
   #nav-toggle {
     -webkit-transform: scale(0.6); }
   #banner {
-    height: 130vh; }
+    height: 140vh; }
     #banner h3 {
       font-size: 1rem; }
     #banner #btn {
